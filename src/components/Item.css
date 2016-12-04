@@ -1,0 +1,23 @@
+.item-todo {
+  display: flex;
+  list-style: none;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #B2EBF2;
+  align-items: center;
+}
+
+.item-todo label {
+  display: inline;
+  top: 2px;
+  margin-bottom: 0;
+}
+
+.item-todo a {
+  flex: 1;
+  color: inherit;
+}
+
+.item-todo.is-complete a {
+  text-decoration: line-through;
+}

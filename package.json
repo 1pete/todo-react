@@ -1,0 +1,55 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "webpack-dashboard -- node configuration/server/server.js",
+    "profile": "webpack --config configuration/webpack/webpack.config --env prod --profile --json > stats.json",
+    "build": "webpack --config configuration/webpack/webpack.config --env prod",
+    "lint": "eslint configuration src"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "~1.2.0",
+    "@blueprintjs/datetime": "~1.2.0",
+    "classnames": "~2.2.0",
+    "core-js": "~2.4.0",
+    "moment": "~2.17.0",
+    "react": "~15.4.0",
+    "react-addons-css-transition-group": "~15.4.0",
+    "react-dom": "~15.4.0",
+    "react-hot-loader": "3.0.0-beta.6",
+    "react-redux": "5.0.0-rc.1",
+    "react-router": "4.0.0-alpha.6",
+    "redux": "~3.6.0",
+    "redux-thunk": "~2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "~6.18.0",
+    "babel-eslint": "~7.1.0",
+    "babel-loader": "~6.2.0",
+    "babel-plugin-transform-class-properties": "~6.19.0",
+    "babel-plugin-transform-object-rest-spread": "~6.19.0",
+    "babel-preset-latest": "~6.16.0",
+    "babel-preset-react": "~6.16.0",
+    "clean-webpack-plugin": "~0.1.0",
+    "css-loader": "~0.26.0",
+    "eslint": "~3.11.0",
+    "eslint-config-airbnb": "~13.0.0",
+    "eslint-loader": "~1.6.0",
+    "eslint-plugin-import": "~2.2.0",
+    "eslint-plugin-jsx-a11y": "~2.2.0",
+    "eslint-plugin-react": "~6.7.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "~0.9.0",
+    "html-webpack-plugin": "~2.24.0",
+    "style-loader": "~0.13.0",
+    "webpack": "2.1.0-beta.27",
+    "webpack-dashboard": "~0.2.0",
+    "webpack-dev-server": "2.1.0-beta.12"
+  },
+  "eslintConfig": {
+    "extends": "./configuration/eslint/eslint.js"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
+  }
+}
