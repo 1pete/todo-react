@@ -21,7 +21,7 @@ module.exports = (env) => {
     ],
     output: {
       path: path.resolve('dist'),
-      publicPath: '/',
+      publicPath: '',
       filename: 'bundle.js',
     },
     module: {
