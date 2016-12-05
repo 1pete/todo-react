@@ -41,3 +41,8 @@ html, body, #root, #root > * {
 .component-description {
   padding: 10px;
 }
+
+::-webkit-date-and-time-value {
+  position: absolute;
+  top: 7px;
+}
