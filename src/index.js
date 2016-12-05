@@ -1,3 +1,4 @@
+import OfflineRuntime from 'offline-plugin/runtime';
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
@@ -6,6 +7,8 @@ import { Provider } from 'react-redux';
 import App from './components/App';
 import configureStore from './configureStore';
 import { readStore } from './utils';
+
+OfflineRuntime.install();
 
 let store = configureStore();
 

@@ -5,6 +5,7 @@ const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsPlugin = require('favicons-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 const root = path.resolve();
 
@@ -68,6 +69,12 @@ module.exports = (env) => {
         logo: path.resolve('src/logo.png'),
         title: 'To-Do List',
         background: '#0097A7',
+      }),
+      new OfflinePlugin({
+        ServiceWorker: {
+          cacheName: 'todo-react',
+        },
+        AppCache: false,
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: { warnings: false, screw_ie8: true },

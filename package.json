@@ -12,6 +12,7 @@
     "classnames": "~2.2.0",
     "core-js": "~2.4.0",
     "moment": "~2.17.0",
+    "offline-plugin": "~4.5.0",
     "react": "~15.4.0",
     "react-addons-css-transition-group": "~15.4.0",
     "react-dom": "~15.4.0",
