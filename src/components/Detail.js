@@ -1,6 +1,19 @@
 import React, { Component, PropTypes } from 'react';
 
 class Detail extends Component {
+  static contextTypes = {
+    router: PropTypes.object,
+  };
+
+  static propTypes = {
+    title: PropTypes.string,
+    dueDate: PropTypes.string,
+    description: PropTypes.string,
+    onSave: PropTypes.func.isRequired,
+    saveLabel: PropTypes.string,
+    redirect: PropTypes.bool,
+  };
+
   constructor() {
     super();
     this.state = {};
@@ -89,18 +102,5 @@ class Detail extends Component {
     );
   }
 }
-
-Detail.contextTypes = {
-  router: PropTypes.object,
-};
-
-Detail.propTypes = {
-  title: PropTypes.string,
-  dueDate: PropTypes.string,
-  description: PropTypes.string,
-  onSave: PropTypes.func.isRequired,
-  saveLabel: PropTypes.string,
-  redirect: PropTypes.bool,
-};
 
 export default Detail;
