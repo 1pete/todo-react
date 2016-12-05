@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import Description from '../components/Description';
+import Detail from '../components/Detail';
 
 import { editTodo } from '../actions';
 
@@ -12,14 +12,14 @@ const mapStateToProps = (state, ownProps) => {
   return {
     title: item.title,
     dueDate: item.dueDate,
-    detail: item.detail,
+    description: item.description,
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onSave: ({ title, dueDate, detail }) => {
-    dispatch(editTodo({ id: ownProps.itemId, title, dueDate, detail }));
+  onSave: ({ title, dueDate, description }) => {
+    dispatch(editTodo({ id: ownProps.itemId, title, dueDate, description }));
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Description);
+export default connect(mapStateToProps, mapDispatchToProps)(Detail);

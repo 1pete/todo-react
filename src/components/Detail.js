@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 
-class Description extends Component {
+class Detail extends Component {
   constructor() {
     super();
     this.state = {};
     this.onSave = this.onSave.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
-    this.handleDetailChange = this.handleDetailChange.bind(this);
+    this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
   }
 
   componentWillMount() {
@@ -19,16 +19,16 @@ class Description extends Component {
     this.setState({
       title: this.props.title,
       dueDate: this.props.dueDate,
-      detail: this.props.detail,
+      description: this.props.description,
     });
   }
 
   onSave() {
-    let { title, dueDate, detail } = this.state;
+    let { title, dueDate, description } = this.state;
 
     if (!title || !title.trim()) return;
 
-    this.props.onSave({ title: title.trim(), dueDate, detail: (detail || '').trim() });
+    this.props.onSave({ title: title.trim(), dueDate, description: (description || '').trim() });
     this.context.router.transitionTo('/');
   }
 
@@ -40,13 +40,13 @@ class Description extends Component {
     this.setState({ dueDate: event.target.value });
   }
 
-  handleDetailChange(event) {
-    this.setState({ detail: event.target.value });
+  handleDescriptionChange(event) {
+    this.setState({ description: event.target.value });
   }
 
   render() {
     let { saveLabel } = this.props;
-    let { title, dueDate, detail } = this.state;
+    let { title, dueDate, description } = this.state;
 
     return (
       <div className="component-description">
@@ -74,14 +74,14 @@ class Description extends Component {
           </div>
         </label>
         <label className="pt-label">
-          Detail
+          Description
           <textarea
             className="pt-input"
             rows={10}
             style={{ width: '100%' }}
-            defaultValue={detail}
-            placeholder="Insert detail..."
-            onChange={this.handleDetailChange}
+            defaultValue={description}
+            placeholder="Insert description..."
+            onChange={this.handleDescriptionChange}
           />
         </label>
         <button className="pt-button pt-intent-primary" onClick={this.onSave}>{ saveLabel || 'Save' }</button>
@@ -90,17 +90,17 @@ class Description extends Component {
   }
 }
 
-Description.contextTypes = {
+Detail.contextTypes = {
   router: PropTypes.object,
 };
 
-Description.propTypes = {
+Detail.propTypes = {
   title: PropTypes.string,
   dueDate: PropTypes.string,
-  detail: PropTypes.string,
+  description: PropTypes.string,
   onSave: PropTypes.func.isRequired,
   saveLabel: PropTypes.string,
   redirect: PropTypes.bool,
 };
 
-export default Description;
+export default Detail;
