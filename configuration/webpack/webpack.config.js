@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const FaviconsPlugin = require('favicons-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 
 const root = path.resolve();
@@ -63,6 +64,11 @@ module.exports = (env) => {
     config.plugins.push(...[
       new CleanPlugin(['dist'], { root }),
       new ExtractTextPlugin('styles.css'),
+      new FaviconsPlugin({
+        logo: path.resolve('src/logo.png'),
+        title: 'To-Do List',
+        background: '#0097A7',
+      }),
       new webpack.optimize.UglifyJsPlugin({
         compress: { warnings: false, screw_ie8: true },
         // sourceMap: true,
