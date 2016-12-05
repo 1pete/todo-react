@@ -8,7 +8,11 @@ import App from './components/App';
 import configureStore from './configureStore';
 import { readStore } from './utils';
 
-OfflineRuntime.install();
+OfflineRuntime.install({
+  onUpdateReady: () => {
+    OfflineRuntime.applyUpdate();
+  },
+});
 
 let store = configureStore();
 
