@@ -1,3 +1,11 @@
+export function today() {
+  let now = new Date();
+  let year = now.getFullYear();
+  let month = `${now.getMonth() + 1}`.padStart(2, '0');
+  let date = `${now.getDate()}`.padStart(2, '0');
+  return `${year}-${month}-${date}`;
+}
+
 export function uuid() {
   return new Array(32).fill(null).reduce((result, _, i) => {
     /* eslint-disable no-bitwise */

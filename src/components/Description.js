@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { DateInput } from '@blueprintjs/datetime';
 
 class Description extends Component {
   constructor() {
@@ -19,7 +18,7 @@ class Description extends Component {
 
     this.setState({
       title: this.props.title,
-      dueDate: this.props.dueDate ? new Date(this.props.dueDate) : '',
+      dueDate: this.props.dueDate,
       detail: this.props.detail,
     });
   }
@@ -37,8 +36,8 @@ class Description extends Component {
     this.setState({ title: event.target.value });
   }
 
-  handleDateChange(date) {
-    this.setState({ dueDate: date });
+  handleDateChange(event) {
+    this.setState({ dueDate: event.target.value });
   }
 
   handleDetailChange(event) {
@@ -64,11 +63,16 @@ class Description extends Component {
         </label>
         <label className="pt-label">
           Due Date
+          <div className="pt-input-group">
+            <span className="pt-icon pt-icon-calendar" />
+            <input
+              className="pt-input"
+              type="date"
+              defaultValue={dueDate}
+              onChange={this.handleDateChange}
+            />
+          </div>
         </label>
-        <div className="pt-input-group">
-          <span className="pt-icon pt-icon-calendar" />
-          <DateInput value={dueDate} onChange={this.handleDateChange} />
-        </div>
         <label className="pt-label">
           Detail
           <textarea
@@ -92,7 +96,7 @@ Description.contextTypes = {
 
 Description.propTypes = {
   title: PropTypes.string,
-  dueDate: PropTypes.object,
+  dueDate: PropTypes.string,
   detail: PropTypes.string,
   onSave: PropTypes.func.isRequired,
   saveLabel: PropTypes.string,

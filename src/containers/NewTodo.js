@@ -1,12 +1,12 @@
-import moment from 'moment';
 import { connect } from 'react-redux';
 
 import Description from '../components/Description';
 
 import { addTodo } from '../actions';
+import { today } from '../utils';
 
 const mapStateToProps = () => ({
-  dueDate: moment().startOf('day'),
+  dueDate: today(),
   saveLabel: 'Add',
 });
 

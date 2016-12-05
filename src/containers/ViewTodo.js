@@ -1,4 +1,3 @@
-import moment from 'moment';
 import { connect } from 'react-redux';
 
 import Description from '../components/Description';
@@ -12,14 +11,14 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     title: item.title,
-    dueDate: moment(item.dueDate),
+    dueDate: item.dueDate,
     detail: item.detail,
   };
 };
 
-const mapDispatchToProps = dispatch => ({
-  onSave: ({ id, title, dueDate, detail }) => {
-    dispatch(editTodo({ id, title, dueDate, detail }));
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onSave: ({ title, dueDate, detail }) => {
+    dispatch(editTodo({ id: ownProps.itemId, title, dueDate, detail }));
   },
 });
 

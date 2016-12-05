@@ -17,7 +17,6 @@ module.exports = (env) => {
     entry: [
       'core-js/shim',
       '@blueprintjs/core/dist/blueprint.css',
-      '@blueprintjs/datetime/dist/blueprint-datetime.css',
       './src/index.css',
       './src/index.js',
     ],
