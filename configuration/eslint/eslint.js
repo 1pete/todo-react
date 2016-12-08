@@ -1,5 +1,5 @@
-const OFF = 'off';
-const ERROR = 'error';
+const OFF = 'off'
+const ERROR = 'error'
 
 module.exports = {
   root: true,
@@ -19,5 +19,6 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': OFF,
     'react/forbid-prop-types': OFF,
     'react/jsx-filename-extension': [ERROR, { extensions: ['.js', '.jsx'] }],
+    semi: [ERROR, 'never'],
   },
-};
+}

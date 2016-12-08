@@ -1,8 +1,8 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
-import classNames from 'classnames';
+import React, { PropTypes } from 'react'
+import { Link } from 'react-router'
+import classNames from 'classnames'
 
-import './Item.css';
+import './Item.css'
 
 const Item = ({ id, title, completed, onCheck, onDelete }) => (
   <li className={classNames('item-todo', completed && 'is-complete')}>
@@ -13,7 +13,7 @@ const Item = ({ id, title, completed, onCheck, onDelete }) => (
     <Link to={`/item/${id}`}>{title}</Link>
     <button className="pt-button pt-minimal pt-icon-cross" onClick={() => onDelete(id)} />
   </li>
-);
+)
 
 Item.propTypes = {
   id: PropTypes.string.isRequired,
@@ -21,6 +21,6 @@ Item.propTypes = {
   completed: PropTypes.bool,
   onCheck: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
-};
+}
 
-export default Item;
+export default Item

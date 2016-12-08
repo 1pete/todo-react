@@ -1,16 +1,16 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
-const CleanPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const FaviconsPlugin = require('favicons-webpack-plugin');
-const HtmlPlugin = require('html-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
+const CleanPlugin = require('clean-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const FaviconsPlugin = require('favicons-webpack-plugin')
+const HtmlPlugin = require('html-webpack-plugin')
+const OfflinePlugin = require('offline-plugin')
 
-const root = path.resolve();
+const root = path.resolve()
 
 module.exports = (env) => {
-  const isDev = env !== 'prod';
+  const isDev = env !== 'prod'
 
   const config = {
     context: root,
@@ -56,10 +56,10 @@ module.exports = (env) => {
         },
       }),
     ],
-  };
+  }
 
   if (isDev) {
-    config.plugins.push(new webpack.HotModuleReplacementPlugin());
+    config.plugins.push(new webpack.HotModuleReplacementPlugin())
   } else {
     config.plugins.push(...[
       new CleanPlugin(['dist'], { root }),
@@ -79,8 +79,8 @@ module.exports = (env) => {
         compress: { warnings: false, screw_ie8: true },
         // sourceMap: true,
       }),
-    ]);
+    ])
   }
 
-  return config;
-};
+  return config
+}

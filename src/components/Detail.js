@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 
 class Detail extends Component {
   static contextTypes = {
@@ -15,51 +15,51 @@ class Detail extends Component {
   };
 
   constructor() {
-    super();
-    this.state = {};
-    this.onSave = this.onSave.bind(this);
-    this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleDateChange = this.handleDateChange.bind(this);
-    this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
+    super()
+    this.state = {}
+    this.onSave = this.onSave.bind(this)
+    this.handleTitleChange = this.handleTitleChange.bind(this)
+    this.handleDateChange = this.handleDateChange.bind(this)
+    this.handleDescriptionChange = this.handleDescriptionChange.bind(this)
   }
 
   componentWillMount() {
     if (this.props.redirect) {
-      this.context.router.transitionTo('/');
-      return;
+      this.context.router.transitionTo('/')
+      return
     }
 
     this.setState({
       title: this.props.title,
       dueDate: this.props.dueDate,
       description: this.props.description,
-    });
+    })
   }
 
   onSave() {
-    let { title, dueDate, description } = this.state;
+    let { title, dueDate, description } = this.state
 
-    if (!title || !title.trim()) return;
+    if (!title || !title.trim()) return
 
-    this.props.onSave({ title: title.trim(), dueDate, description: (description || '').trim() });
-    this.context.router.transitionTo('/');
+    this.props.onSave({ title: title.trim(), dueDate, description: (description || '').trim() })
+    this.context.router.transitionTo('/')
   }
 
   handleTitleChange(event) {
-    this.setState({ title: event.target.value });
+    this.setState({ title: event.target.value })
   }
 
   handleDateChange(event) {
-    this.setState({ dueDate: event.target.value });
+    this.setState({ dueDate: event.target.value })
   }
 
   handleDescriptionChange(event) {
-    this.setState({ description: event.target.value });
+    this.setState({ description: event.target.value })
   }
 
   render() {
-    let { saveLabel } = this.props;
-    let { title, dueDate, description } = this.state;
+    let { saveLabel } = this.props
+    let { title, dueDate, description } = this.state
 
     return (
       <div className="component-description">
@@ -99,8 +99,8 @@ class Detail extends Component {
         </label>
         <button className="pt-button pt-intent-primary" onClick={this.onSave}>{ saveLabel || 'Save' }</button>
       </div>
-    );
+    )
   }
 }
 
-export default Detail;
+export default Detail

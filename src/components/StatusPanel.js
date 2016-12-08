@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import FilterButton from '../containers/FilterButton';
+import FilterButton from '../containers/FilterButton'
 
 export default () => (
   <nav className="pt-navbar footer">
@@ -10,4 +10,4 @@ export default () => (
       <FilterButton status="COMPLETED" size="small">Completed</FilterButton>
     </div>
   </nav>
-);
+)

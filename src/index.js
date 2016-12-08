@@ -1,20 +1,20 @@
-import OfflineRuntime from 'offline-plugin/runtime';
-import React from 'react';
-import { render } from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import { Provider } from 'react-redux';
+import OfflineRuntime from 'offline-plugin/runtime'
+import React from 'react'
+import { render } from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
+import { Provider } from 'react-redux'
 
-import App from './components/App';
-import configureStore from './configureStore';
-import { readStore } from './utils';
+import App from './components/App'
+import configureStore from './configureStore'
+import { readStore } from './utils'
 
 OfflineRuntime.install({
   onUpdateReady: () => {
-    OfflineRuntime.applyUpdate();
+    OfflineRuntime.applyUpdate()
   },
-});
+})
 
-let store = configureStore();
+let store = configureStore()
 
 render(
   <AppContainer>
@@ -23,13 +23,13 @@ render(
     </Provider>
   </AppContainer>,
   document.getElementById('root'),
-);
+)
 
-store.dispatch({ type: 'STORE_LOADED', items: readStore() });
+store.dispatch({ type: 'STORE_LOADED', items: readStore() })
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {
-    const UpdatedApp = require('./components/App').default; // eslint-disable-line
+    const UpdatedApp = require('./components/App').default // eslint-disable-line
     render(
       <AppContainer>
         <Provider store={store}>
@@ -37,6 +37,6 @@ if (module.hot) {
         </Provider>
       </AppContainer>,
       document.getElementById('root'),
-    );
-  });
+    )
+  })
 }

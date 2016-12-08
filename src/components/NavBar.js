@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import React, { PropTypes } from 'react'
+import { Link } from 'react-router'
 
 const NavBar = ({ showAdd, showBack, title }) => (
   <nav className="pt-navbar pt-dark header">
@@ -11,12 +11,12 @@ const NavBar = ({ showAdd, showBack, title }) => (
       { showAdd && <Link to="/new" className="pt-button pt-minimal pt-icon-add">New</Link> }
     </div>
   </nav>
-);
+)
 
 NavBar.propTypes = {
   showAdd: PropTypes.bool,
   showBack: PropTypes.bool,
   title: PropTypes.string,
-};
+}
 
-export default NavBar;
+export default NavBar
