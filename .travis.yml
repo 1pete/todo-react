@@ -8,8 +8,18 @@ cache:
 node_js:
   - '6'
   - '7'
+before_script:
+  - git config --global user.email "gh-pages@localhost"
+  - git config --global user.name "npm gh-pages"
 script:
   - npm run lint
   - npm test
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+deploy:
+  provider: script
+  script: /bin/sh scripts/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
+    node: '6'

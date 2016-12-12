@@ -4,6 +4,7 @@
     "start": "webpack-dashboard -- node configuration/server/server.js",
     "profile": "webpack --config configuration/webpack/webpack.config --env prod --profile --json > stats.json",
     "build": "webpack --config configuration/webpack/webpack.config --env prod",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint configuration src",
     "test": "nyc --reporter=lcov --reporter=text mocha test/setup.js test/**/*.spec.js",
     "test:watch": "mocha --watch test/setup.js test/**/*.spec.js"
@@ -44,6 +45,7 @@
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "favicons-webpack-plugin": "~0.0.7",
     "file-loader": "~0.9.0",
+    "gh-pages": "~0.12.0",
     "html-webpack-plugin": "~2.24.0",
     "mocha": "~3.2.0",
     "nyc": "~10.0.0",
