@@ -2,10 +2,12 @@ import React, { PropTypes } from 'react'
 
 import Item from '../containers/InteractiveItem'
 
+import './List.css'
+
 const List = ({ items }) => {
   if (!items.length) {
     return (
-      <div className="pt-non-ideal-state" style={{ position: 'absolute', top: '20%' }}>
+      <div className="pt-non-ideal-state">
         <div className="pt-non-ideal-state-visual pt-non-ideal-state-icon">
           <span className="pt-icon pt-icon-inbox" />
         </div>
