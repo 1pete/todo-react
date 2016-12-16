@@ -40,6 +40,9 @@ module.exports = (env) => {
     },
     devtool: isDev ? 'eval-source-map' : 'source-map',
     recordsOutputPath: path.resolve('records.json'),
+    performance: {
+      hints: !isDev && 'warning',
+    },
     plugins: [
       new HtmlPlugin({
         template: './src/index.ejs',
