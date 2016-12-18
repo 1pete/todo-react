@@ -12,6 +12,9 @@ OfflineRuntime.install({
   onUpdateReady: () => {
     OfflineRuntime.applyUpdate()
   },
+  onUpdated: () => {
+    window.location.reload()
+  },
 })
 
 let store = configureStore()

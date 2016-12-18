@@ -75,6 +75,7 @@ module.exports = (env) => {
       new OfflinePlugin({
         ServiceWorker: {
           cacheName: 'todo-react',
+          events: true,
         },
         AppCache: false,
       }),
