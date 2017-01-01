@@ -1,3 +1,5 @@
+/* @flow */
+
 export function today() {
   let now = new Date()
   let year = now.getFullYear()

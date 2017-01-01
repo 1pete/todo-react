@@ -1,3 +1,5 @@
+/* @flow */
+
 import {
   ADD_TODO,
   EDIT_TODO,
@@ -5,7 +7,7 @@ import {
   TOGGLE_TODO,
 } from '../actions'
 
-export default function (state = [], { type, ...data }) {
+export default function (state:Array<Object> = [], { type, ...data }:{type:string}) {
   if (type === ADD_TODO) {
     return [...state, data]
   }
