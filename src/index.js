@@ -6,7 +6,6 @@ import { Provider } from 'react-redux'
 
 import App from './components/App'
 import configureStore from './configureStore'
-import { readStore } from './utils'
 
 OfflineRuntime.install({
   onUpdateReady: () => {
@@ -27,8 +26,6 @@ render(
   </AppContainer>,
   document.getElementById('root'),
 )
-
-store.dispatch({ type: 'STORE_LOADED', items: readStore() })
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {

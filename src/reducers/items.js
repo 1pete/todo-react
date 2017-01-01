@@ -1,5 +1,4 @@
 import {
-  STORE_LOADED,
   ADD_TODO,
   EDIT_TODO,
   DELETE_TODO,
@@ -7,10 +6,6 @@ import {
 } from '../actions'
 
 export default function (state = [], { type, ...data }) {
-  if (type === STORE_LOADED) {
-    return data.items
-  }
-
   if (type === ADD_TODO) {
     return [...state, data]
   }

@@ -1,35 +1,26 @@
 import { createStore, applyMiddleware, compose } from 'redux'
+import { persistStore, autoRehydrate } from 'redux-persist'
 import thunk from 'redux-thunk'
 import reducers from './reducers'
 
-import { writeStore } from './utils'
-
 export default function configureStore() {
-  const storeSave = store => next => (action) => {
-    const result = next(action)
-    if (action.type !== 'STORE_LOADED') {
-      writeStore(store.getState().items)
-    }
-    return result
-  }
-
-  const middleware = [thunk, storeSave]
+  const middleware = [thunk]
 
   let enhancer
 
   if (__DEV__) {
-    let devToolsExtension = f => f
-     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose // eslint-disable-line
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose // eslint-disable-line
 
     enhancer = composeEnhancers(
+      autoRehydrate(),
       applyMiddleware(...middleware),
-      devToolsExtension,
     )
   } else {
-    enhancer = applyMiddleware(...middleware)
+    enhancer = compose(autoRehydrate(), applyMiddleware(...middleware))
   }
 
   const store = createStore(reducers, enhancer)
+  persistStore(store, { keyPrefix: 'todo-react:' })
 
   if (__DEV__ && module.hot) {
     module.hot.accept('./reducers', () =>

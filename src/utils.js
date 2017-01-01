@@ -24,18 +24,3 @@ export function uuid() {
     return `${result}${separator}${random.toString(16)}`
   }, '')
 }
-
-const STORE_KEY = 'todo-react'
-
-export function readStore() {
-  let storedData = localStorage.getItem(STORE_KEY)
-  try {
-    return (storedData && JSON.parse(storedData)) || []
-  } catch (e) {
-    return []
-  }
-}
-
-export function writeStore(data) {
-  localStorage.setItem(STORE_KEY, JSON.stringify(data || []))
-}
