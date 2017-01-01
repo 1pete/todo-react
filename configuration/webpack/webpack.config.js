@@ -45,7 +45,7 @@ module.exports = (env) => {
     },
     plugins: [
       new HtmlPlugin({
-        template: './src/index.ejs',
+        template: './src/index.html',
       }),
       new webpack.DefinePlugin({
         'process.env': {

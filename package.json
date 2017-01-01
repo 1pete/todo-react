@@ -46,11 +46,11 @@
     "favicons-webpack-plugin": "~0.0.7",
     "file-loader": "~0.9.0",
     "gh-pages": "~0.12.0",
-    "html-webpack-plugin": "~2.24.0",
+    "html-webpack-plugin": "~2.25.0",
     "mocha": "~3.2.0",
     "nyc": "~10.0.0",
     "style-loader": "~0.13.0",
-    "webpack": "2.2.0-rc.1",
+    "webpack": "2.2.0-rc.3",
     "webpack-dashboard": "~0.2.0",
     "webpack-dev-server": "2.2.0-rc.0"
   },
