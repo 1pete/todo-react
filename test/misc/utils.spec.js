@@ -8,6 +8,6 @@ describe('utils', () => {
   })
 
   it('should get today in proper format', () => {
-    expect(utils.today()).to.match(/^20[0-9]{2}-[12][0-9]-[12][0-9]$/)
+    expect(utils.today()).to.match(/^20[0-9]{2}-[01][0-9]-[0123][0-9]$/)
   })
 })
