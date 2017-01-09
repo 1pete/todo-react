@@ -2,19 +2,20 @@ import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
 import List from '../components/List'
 
-const getVisibleItems = (items, status) => {
+const getFlag = (status) => {
   switch (status) {
     case 'COMPLETED':
-      return items.filter(t => t.completed)
+      return true
     case 'ACTIVE':
-      return items.filter(t => !t.completed)
+      return false
     default:
-      return items
+      return null
   }
 }
 
 const mapStateToProps = state => ({
-  items: getVisibleItems(state.items, state.status),
+  items: state.items,
+  flag: getFlag(state.status),
 })
 
 const mapDispatchToProps = ({

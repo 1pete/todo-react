@@ -3,4 +3,12 @@
   top: 20%;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
+  transition: opacity 0.4s;
+}
+
+.list-container {
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  z-index: 1;
 }

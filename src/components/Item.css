@@ -1,9 +1,9 @@
 .item-todo {
   display: flex;
   list-style: none;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  background-color: #B2EBF2;
+  padding: 0 10px;
+  background-color: #b2ebf2;
+  box-shadow: 0 -1px 0 #ededed;
   align-items: center;
 }
 
@@ -16,8 +16,10 @@
 .item-todo a {
   flex: 1;
   color: inherit;
+  transition: opacity 0.4s;
 }
 
 .item-todo.is-complete a {
+  opacity: 0.6;
   text-decoration: line-through;
 }

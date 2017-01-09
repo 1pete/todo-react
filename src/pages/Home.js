@@ -2,12 +2,12 @@ import React from 'react'
 
 import NavBar from '../components/NavBar'
 import StatusPanel from '../components/StatusPanel'
-import VisibleItems from '../containers/VisibleItems'
+import List from '../containers/List'
 
 const HomePage = () => (
   <div className="display-flex">
     <NavBar showAdd />
-    <div className="flex-1"><VisibleItems /></div>
+    <div className="flex-1"><List /></div>
     <div><StatusPanel /></div>
   </div>
 )

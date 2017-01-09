@@ -4,8 +4,8 @@ import classNames from 'classnames'
 
 import './Item.css'
 
-const Item = ({ id, title, completed, onCheck, onDelete }) => (
-  <li className={classNames('item-todo', completed && 'is-complete')}>
+const Item = ({ id, title, completed, onCheck, onDelete, style }) => (
+  <li style={style} className={classNames('item-todo', completed && 'is-complete')}>
     <label className="pt-control pt-checkbox">
       <input type="checkbox" onChange={() => onCheck(id)} defaultChecked={completed} />
       <span className="pt-control-indicator" />
@@ -21,10 +21,12 @@ Item.propTypes = {
   completed: PropTypes.bool,
   onCheck: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
+  style: PropTypes.object,
 }
 
 Item.defaultProps = {
   completed: false,
+  style: null,
 }
 
 export default Item
