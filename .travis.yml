@@ -2,9 +2,6 @@ git:
   depth: 10
 sudo: false
 language: node_js
-cache:
-  directories:
-    - node_modules
 node_js:
   - '6'
   - '7'
@@ -13,6 +10,7 @@ before_script:
   - git config --global user.name "npm gh-pages"
 script:
   - npm run lint
+  - npm run flow
   - npm test
   - npm run build
 after_success:
