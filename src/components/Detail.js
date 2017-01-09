@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react'
 class Detail extends Component {
   static contextTypes = {
     router: PropTypes.object,
-  };
+  }
 
   static propTypes = {
     title: PropTypes.string,
@@ -12,7 +12,15 @@ class Detail extends Component {
     onSave: PropTypes.func.isRequired,
     saveLabel: PropTypes.string,
     redirect: PropTypes.bool,
-  };
+  }
+
+  static defaultProps = {
+    title: '',
+    dueDate: '',
+    description: '',
+    saveLabel: '',
+    redirect: false,
+  }
 
   constructor() {
     super()

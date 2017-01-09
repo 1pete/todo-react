@@ -1,6 +1,6 @@
-/* @flow */
+// @flow
 
-export function today() {
+export function today(): string {
   let now = new Date()
   let year = now.getFullYear()
   let month = `${now.getMonth() + 1}`.padStart(2, '0')
@@ -8,7 +8,7 @@ export function today() {
   return `${year}-${month}-${date}`
 }
 
-export function uuid() {
+export function uuid(): string {
   return new Array(32).fill(null).reduce((result, _, i) => {
     /* eslint-disable no-bitwise */
     let separator = ''

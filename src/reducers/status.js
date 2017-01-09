@@ -1,8 +1,8 @@
-/* @flow */
+// @flow
 
 import { FILTER_TODO } from '../actions'
 
-const status = (state:string = 'ALL', action:{type:string, status:string}) => {
+const status = (state: string = 'ALL', action:{type: string, status: string}) => {
   switch (action.type) {
     case FILTER_TODO:
       return action.status

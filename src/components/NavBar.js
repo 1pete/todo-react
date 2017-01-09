@@ -19,4 +19,10 @@ NavBar.propTypes = {
   title: PropTypes.string,
 }
 
+NavBar.defaultProps = {
+  showAdd: false,
+  showBack: false,
+  title: '',
+}
+
 export default NavBar

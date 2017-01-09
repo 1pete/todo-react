@@ -23,4 +23,8 @@ Item.propTypes = {
   onDelete: PropTypes.func.isRequired,
 }
 
+Item.defaultProps = {
+  completed: false,
+}
+
 export default Item

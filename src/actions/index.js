@@ -1,4 +1,4 @@
-/* @flow */
+// @flow
 
 import { uuid } from '../utils'
 

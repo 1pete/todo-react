@@ -18,4 +18,8 @@ ViewPage.propTypes = {
   params: PropTypes.object,
 }
 
+ViewPage.defaultProps = {
+  params: {},
+}
+
 export default ViewPage
