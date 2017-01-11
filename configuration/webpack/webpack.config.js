@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CleanPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FaviconsPlugin = require('favicons-webpack-plugin')
@@ -82,6 +83,13 @@ module.exports = (env) => {
       new webpack.optimize.UglifyJsPlugin({
         compress: { warnings: false, screw_ie8: true },
         // sourceMap: true,
+      }),
+      new BundleAnalyzerPlugin({
+        analyzerMode: 'static',
+        reportFilename: path.resolve('report.html'),
+        openAnalyzer: false,
+        generateStatsFile: true,
+        statsFilename: path.resolve('stats.json'),
       }),
     ])
   }

@@ -2,7 +2,6 @@
   "private": true,
   "scripts": {
     "start": "webpack-dashboard -- node configuration/server/server.js",
-    "profile": "webpack --config configuration/webpack/webpack.config --env prod --profile --json > stats.json",
     "build": "webpack --config configuration/webpack/webpack.config --env prod",
     "deploy": "gh-pages -d dist",
     "lint": "eslint configuration src",
@@ -55,6 +54,7 @@
     "nyc": "~10.0.0",
     "style-loader": "~0.13.0",
     "webpack": "2.2.0-rc.3",
+    "webpack-bundle-analyzer": "~2.2.0",
     "webpack-dashboard": "~0.2.0",
     "webpack-dev-server": "2.2.0-rc.0"
   },
