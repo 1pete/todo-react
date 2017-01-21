@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "start": "webpack-dashboard -- node configuration/server/server.js",
-    "build": "webpack --config configuration/webpack/webpack.config --env prod",
+    "start": "webpack-dashboard -- node config/server/server.js",
+    "build": "webpack --config config/webpack/webpack.config --env prod",
     "deploy": "gh-pages -d dist",
-    "lint": "eslint configuration src",
+    "lint": "eslint config src",
     "flow": "flow check",
     "test": "nyc --reporter=lcov --reporter=text mocha test/setup.js test/**/*.spec.js",
     "test:watch": "mocha --watch test/setup.js test/**/*.spec.js"
@@ -59,7 +59,7 @@
     "webpack-dev-server": "2.2.0-rc.0"
   },
   "eslintConfig": {
-    "extends": "./configuration/eslint/eslint.js"
+    "extends": "./config/eslint/eslint.js"
   },
   "nyc": {
     "sourceMap": false,
