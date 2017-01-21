@@ -6,7 +6,7 @@ const webpackConfig = require('../webpack/webpack.config')()
 
 const port = 3000
 
-webpackConfig.entry.unshift(...[
+webpackConfig.entry.app.unshift(...[
   'react-hot-loader/patch',
   `webpack-dev-server/client?http://localhost:${port}`,
   'webpack/hot/only-dev-server',

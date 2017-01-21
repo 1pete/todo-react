@@ -15,49 +15,48 @@ module.exports = (env) => {
 
   const config = {
     context: root,
-    entry: [
-      'core-js/shim',
-      '@blueprintjs/core/dist/blueprint.css',
-      './src/index.css',
-      './src/index.js',
-    ],
+    entry: {
+      app: [
+        'core-js/shim',
+        '@blueprintjs/core/dist/blueprint.css',
+        './src/index.css',
+        './src/index.js',
+      ],
+    },
     output: {
       path: path.resolve('dist'),
       publicPath: '',
-      filename: 'bundle.js',
+      filename: '[name].js',
     },
     module: {
       rules: [
-        { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: [{ loader: 'babel-loader', options: isDev ? require('../babel/babel.dev') : require('../babel/babel.prod') }],
+        },
         {
           test: /\.css$/,
-          loader: isDev ? 'style!css' : ExtractTextPlugin.extract('css?minimize'),
+          loader:
+            isDev
+            ? ['style-loader', 'css-loader']
+            : ExtractTextPlugin.extract({ loader: ['css-loader'] }),
         },
-        { test: /\.(eot|svg|ttf|woff|woff2)$/, loader: 'file?name=public/fonts/[name].[ext]' },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          use: [{ loader: 'file-loader', options: { name: 'public/fonts/[name].[ext]' } }],
+        },
       ],
-    },
-    resolveLoader: {
-      moduleExtensions: ['-loader'],
     },
     devtool: isDev ? 'eval-source-map' : 'source-map',
     recordsOutputPath: path.resolve('records.json'),
-    performance: {
-      hints: !isDev && 'warning',
-    },
     plugins: [
-      new HtmlPlugin({
-        template: './src/index.html',
-      }),
+      new HtmlPlugin({ template: './src/index.html' }),
       new webpack.DefinePlugin({
         'process.env': {
           NODE_ENV: JSON.stringify(isDev ? 'development' : 'production'),
         },
         __DEV__: isDev,
-      }),
-      new webpack.LoaderOptionsPlugin({
-        options: {
-          babel: isDev ? require('../babel/babel.dev') : require('../babel/babel.prod'),
-        },
       }),
     ],
   }
@@ -79,6 +78,9 @@ module.exports = (env) => {
           events: true,
         },
         AppCache: false,
+      }),
+      new webpack.LoaderOptionsPlugin({
+        minimize: true,
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: { warnings: false, screw_ie8: true },
