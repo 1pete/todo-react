@@ -1,0 +1,15 @@
+parser: babel-eslint
+extends: airbnb
+globals:
+  __DEV__: true
+env:
+  browser: true
+rules:
+  class-methods-use-this: off
+  prefer-const: off
+  semi: [error, never]
+  jsx-a11y/anchor-has-content: off
+  jsx-a11y/label-has-for: off
+  jsx-a11y/no-static-element-interactions: off
+  react/forbid-prop-types: off
+  react/jsx-filename-extension: [error, { extensions: [.js, .jsx] }]

@@ -1,8 +1,12 @@
+/* eslint-disable
+  import/no-extraneous-dependencies,
+*/
+
 const webpack = require('webpack')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const WebpackDevServer = require('webpack-dev-server')
 
-const webpackConfig = require('../webpack/webpack.config')()
+const webpackConfig = require('./webpack.config')()
 
 const port = 3000
 

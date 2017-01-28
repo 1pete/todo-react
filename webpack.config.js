@@ -33,11 +33,11 @@ module.exports = (env) => {
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          use: [{ loader: 'babel-loader', options: isDev ? require('../babel/babel.dev') : require('../babel/babel.prod') }],
+          use: 'babel-loader',
         },
         {
           test: /\.css$/,
-          loader:
+          use:
             isDev
             ? ['style-loader', 'css-loader']
             : ExtractTextPlugin.extract({ loader: ['css-loader'] }),
