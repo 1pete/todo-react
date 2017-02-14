@@ -6,7 +6,7 @@
   "lang": "en-US",
   "display": "standalone",
   "orientation": "any",
-  "start_url": "/todo-react?homescreen=1",
+  "start_url": "/todo-react/?homescreen=1",
   "background_color": "#0097A7",
   "icons": [
     {
