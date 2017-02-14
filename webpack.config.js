@@ -18,7 +18,14 @@ module.exports = (env) => {
     context: root,
     entry: {
       app: [
-        'core-js/shim',
+        'core-js/es6/array',
+        'core-js/es6/function',
+        'core-js/es6/number',
+        'core-js/es6/object',
+        'core-js/es6/promise',
+        'core-js/es6/string',
+        'core-js/es7/array',
+        'core-js/es7/string',
         '@blueprintjs/core/dist/blueprint.css',
         './src/index.css',
         './src/index.js',
