@@ -3,6 +3,7 @@ const webpack = require('webpack')
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CleanPlugin = require('clean-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FaviconsPlugin = require('favicons-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
@@ -69,12 +70,6 @@ module.exports = (env) => {
         },
         __DEV__: isDev,
       }),
-      new FaviconsPlugin({
-        logo: path.resolve('src/logo.png'),
-        prefix: 'icons/',
-        title: 'To-Do List',
-        background: '#0097A7',
-      }),
     ],
   }
 
@@ -84,7 +79,14 @@ module.exports = (env) => {
   } else {
     config.plugins.push(...[
       new CleanPlugin(['dist'], { root }),
+      new CopyPlugin([{ from: 'src/manifest.json' }]),
       new ExtractTextPlugin('styles.css'),
+      new FaviconsPlugin({
+        logo: path.resolve('src/logo.png'),
+        prefix: 'icons/',
+        title: 'To-Do List',
+        background: '#0097A7',
+      }),
       new OfflinePlugin({
         ServiceWorker: {
           cacheName: 'todo-react',
