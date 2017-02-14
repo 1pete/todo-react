@@ -30,17 +30,13 @@ module.exports = (env) => {
     },
     module: {
       rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: 'babel-loader',
-        },
+        { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
         {
           test: /\.css$/,
           use:
             isDev
             ? ['style-loader', 'css-loader']
-            : ExtractTextPlugin.extract({ loader: ['css-loader'] }),
+            : ExtractTextPlugin.extract({ use: ['css-loader'] }),
         },
         {
           test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -84,7 +80,6 @@ module.exports = (env) => {
       }),
       new webpack.optimize.UglifyJsPlugin({
         compress: { warnings: false, screw_ie8: true },
-        // sourceMap: true,
       }),
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',

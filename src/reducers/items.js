@@ -15,7 +15,7 @@ export default function (state: Array<Object> = [], { type, ...data }:{type: str
   if (type === EDIT_TODO) {
     return state.map((item) => {
       if (item.id === data.id) {
-        return { ...data }
+        return { ...item, ...data }
       }
 
       return item

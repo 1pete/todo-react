@@ -33,7 +33,7 @@ class Detail extends Component {
 
   componentWillMount() {
     if (this.props.redirect) {
-      this.context.router.transitionTo('/')
+      this.context.router.push('/')
       return
     }
 
@@ -50,7 +50,7 @@ class Detail extends Component {
     if (!title || !title.trim()) return
 
     this.props.onSave({ title: title.trim(), dueDate, description: (description || '').trim() })
-    this.context.router.transitionTo('/')
+    this.context.router.push('/')
   }
 
   handleTitleChange(event) {

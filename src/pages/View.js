@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react'
 import NavBar from '../components/NavBar'
 import ViewTodo from '../containers/ViewTodo'
 
-const ViewPage = ({ params }) => (
+const ViewPage = ({ match: { params } }) => (
   <div>
     <NavBar showBack />
     <ViewTodo itemId={params.id} />
@@ -15,11 +15,11 @@ ViewPage.contextTypes = {
 }
 
 ViewPage.propTypes = {
-  params: PropTypes.object,
+  match: PropTypes.object,
 }
 
 ViewPage.defaultProps = {
-  params: {},
+  match: {},
 }
 
 export default ViewPage

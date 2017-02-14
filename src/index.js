@@ -27,7 +27,7 @@ render(
   document.getElementById('root'),
 )
 
-if (module.hot) {
+if (__DEV__ && module.hot) {
   module.hot.accept('./components/App', () => {
     const UpdatedApp = require('./components/App').default // eslint-disable-line
     render(

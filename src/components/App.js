@@ -1,5 +1,5 @@
 import React from 'react'
-import { Match, HashRouter as Router } from 'react-router'
+import { Route, HashRouter as Router } from 'react-router-dom'
 
 import Home from '../pages/Home'
 import New from '../pages/New'
@@ -8,9 +8,9 @@ import View from '../pages/View'
 export default () => (
   <Router>
     <div>
-      <Match exactly pattern="/" component={Home} />
-      <Match exactly pattern="/new" component={New} />
-      <Match exactly pattern="/item/:id" component={View} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/new" component={New} />
+      <Route exact path="/item/:id" component={View} />
     </div>
   </Router>
 )

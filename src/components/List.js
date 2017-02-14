@@ -27,7 +27,7 @@ class List extends Component {
     let { items, flag } = this.props
 
     if (flag != null) {
-      items = items.filter(i => i.completed === flag)
+      items = items.filter(i => !!i.completed === flag)
     }
 
     return items
