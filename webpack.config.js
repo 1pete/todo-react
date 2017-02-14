@@ -9,6 +9,7 @@ const HtmlPlugin = require('html-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
 
 const root = path.resolve()
+const dist = path.resolve('dist')
 
 module.exports = (env) => {
   const isDev = env !== 'prod'
@@ -24,7 +25,7 @@ module.exports = (env) => {
       ],
     },
     output: {
-      path: path.resolve('dist'),
+      path: dist,
       publicPath: '',
       filename: '[name].js',
     },
@@ -46,6 +47,13 @@ module.exports = (env) => {
     },
     devtool: isDev ? 'eval-source-map' : 'source-map',
     recordsOutputPath: path.resolve('records.json'),
+    devServer: {
+      noInfo: true,
+      hot: true,
+      contentBase: dist,
+      historyApiFallback: true,
+      port: 3000,
+    },
     plugins: [
       new HtmlPlugin({ template: './src/index.html' }),
       new webpack.DefinePlugin({
@@ -64,6 +72,7 @@ module.exports = (env) => {
   }
 
   if (isDev) {
+    config.entry.app.unshift('react-hot-loader/patch')
     config.plugins.push(new webpack.HotModuleReplacementPlugin())
   } else {
     config.plugins.push(...[
