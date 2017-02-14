@@ -54,6 +54,12 @@ module.exports = (env) => {
         },
         __DEV__: isDev,
       }),
+      new FaviconsPlugin({
+        logo: path.resolve('src/logo.png'),
+        prefix: 'icons/',
+        title: 'To-Do List',
+        background: '#0097A7',
+      }),
     ],
   }
 
@@ -63,11 +69,6 @@ module.exports = (env) => {
     config.plugins.push(...[
       new CleanPlugin(['dist'], { root }),
       new ExtractTextPlugin('styles.css'),
-      new FaviconsPlugin({
-        logo: path.resolve('src/logo.png'),
-        title: 'To-Do List',
-        background: '#0097A7',
-      }),
       new OfflinePlugin({
         ServiceWorker: {
           cacheName: 'todo-react',
