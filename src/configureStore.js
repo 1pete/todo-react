@@ -1,22 +1,16 @@
-import { createStore, applyMiddleware, compose } from 'redux'
+import { createStore, compose } from 'redux'
 import { persistStore, autoRehydrate } from 'redux-persist'
-import thunk from 'redux-thunk'
 import reducers from './reducers'
 
 export default function configureStore() {
-  const middleware = [thunk]
-
   let enhancer
 
   if (__DEV__) {
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose // eslint-disable-line
 
-    enhancer = composeEnhancers(
-      autoRehydrate(),
-      applyMiddleware(...middleware),
-    )
+    enhancer = composeEnhancers(autoRehydrate())
   } else {
-    enhancer = compose(autoRehydrate(), applyMiddleware(...middleware))
+    enhancer = compose(autoRehydrate())
   }
 
   const store = createStore(reducers, enhancer)
@@ -24,7 +18,7 @@ export default function configureStore() {
 
   if (__DEV__ && module.hot) {
     module.hot.accept('./reducers', () =>
-      store.replaceReducer(require('./reducers').default), // eslint-disable-line global-require
+      store.replaceReducer(reducers),
     )
   }
 

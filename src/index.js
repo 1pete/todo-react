@@ -18,25 +18,20 @@ OfflineRuntime.install({
 
 let store = configureStore()
 
-render(
-  <AppContainer>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </AppContainer>,
-  document.getElementById('root'),
+const renderApp = Component =>
+  render(
+    <AppContainer>
+      <Provider store={store}>
+        <Component />
+      </Provider>
+    </AppContainer>,
+    document.getElementById('root'),
 )
+
+renderApp(App)
 
 if (__DEV__ && module.hot) {
   module.hot.accept('./components/App', () => {
-    const UpdatedApp = require('./components/App').default // eslint-disable-line
-    render(
-      <AppContainer>
-        <Provider store={store}>
-          <UpdatedApp />
-        </Provider>
-      </AppContainer>,
-      document.getElementById('root'),
-    )
+    renderApp(App)
   })
 }
