@@ -14,12 +14,22 @@
 }
 
 .item-todo a {
-  flex: 1;
+  display: flex;
+  flex: 1 1 0;
   color: inherit;
+  align-items: center;
   transition: opacity 0.4s;
 }
 
 .item-todo.is-complete a {
   opacity: 0.6;
   text-decoration: line-through;
+}
+
+.item-todo .text-title {
+  flex: 1 1 0;
+}
+
+.item-todo .text-duedate {
+  flex: none;
 }

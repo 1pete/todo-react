@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import moment from 'moment'
 
 class Detail extends Component {
   static contextTypes = {
@@ -7,7 +8,7 @@ class Detail extends Component {
 
   static propTypes = {
     title: PropTypes.string,
-    dueDate: PropTypes.string,
+    dueDate: PropTypes.any,
     description: PropTypes.string,
     onSave: PropTypes.func.isRequired,
     saveLabel: PropTypes.string,
@@ -58,7 +59,8 @@ class Detail extends Component {
   }
 
   handleDateChange(event) {
-    this.setState({ dueDate: event.target.value })
+    let dateValue = event.target.value
+    this.setState({ dueDate: dateValue ? moment.utc(dateValue) : null })
   }
 
   handleDescriptionChange(event) {
@@ -68,6 +70,7 @@ class Detail extends Component {
   render() {
     let { saveLabel } = this.props
     let { title, dueDate, description } = this.state
+    const dueDateString = moment(dueDate).format('YYYY-MM-DD')
 
     return (
       <div className="component-description">
@@ -90,7 +93,7 @@ class Detail extends Component {
             <input
               className="pt-input"
               type="date"
-              defaultValue={dueDate}
+              defaultValue={dueDateString}
               onChange={this.handleDateChange}
             />
           </div>
