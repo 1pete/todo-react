@@ -1,13 +1,5 @@
 // @flow
 
-export function today(): string {
-  let now = new Date()
-  let year = now.getFullYear()
-  let month = `${now.getMonth() + 1}`.padStart(2, '0')
-  let date = `${now.getDate()}`.padStart(2, '0')
-  return `${year}-${month}-${date}`
-}
-
 export function uuid(): string {
   return new Array(32).fill(null).reduce((result, _, i) => {
     /* eslint-disable no-bitwise */
@@ -26,3 +18,5 @@ export function uuid(): string {
     return `${result}${separator}${random.toString(16)}`
   }, '')
 }
+
+export default uuid
