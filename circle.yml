@@ -1,6 +1,10 @@
 machine:
   node:
     version: 6
+general:
+  branches:
+    ignore:
+      - gh-pages
 dependencies:
   pre:
     - git config --global user.email "gh-pages@localhost"
