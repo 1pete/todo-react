@@ -1,7 +1,8 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import classNames from 'classnames'
 import moment from 'moment'
+import PropTypes from 'prop-types'
 
 import './Item.css'
 

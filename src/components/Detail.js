@@ -1,5 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import moment from 'moment'
+import PropTypes from 'prop-types'
 
 class Detail extends Component {
   static contextTypes = {

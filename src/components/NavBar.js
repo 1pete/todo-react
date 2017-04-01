@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const NavBar = ({ showAdd, showBack, title }) => (
   <nav className="pt-navbar pt-dark header">
