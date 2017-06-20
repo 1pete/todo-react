@@ -6,15 +6,17 @@ machine:
   node:
     version: 6
 dependencies:
+  override:
+    - yarn
   pre:
     - git config --global user.email "gh-pages@localhost"
     - git config --global user.name "npm gh-pages"
 test:
   override:
-    - npm run lint
-    - npm run flow
-    - npm test
-    - npm run build
+    - yarn lint
+    - yarn flow
+    - yarn test
+    - yarn build
   post:
     - bash <(curl -s https://codecov.io/bash)
 deployment:
