@@ -1,7 +1,8 @@
 .pt-non-ideal-state {
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 50%;
+  height: auto;
   transform: translate3d(-50%, 0, 0);
   transition: opacity 0.4s;
 }
