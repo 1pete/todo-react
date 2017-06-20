@@ -84,7 +84,6 @@ class Detail extends Component {
             defaultValue={title}
             placeholder="Insert task name..."
             onChange={this.handleTitleChange}
-            autoFocus
           />
         </label>
         <label className="pt-label">

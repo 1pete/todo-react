@@ -74,10 +74,11 @@ class List extends Component {
           willLeave={this.willLeave}
           willEnter={this.willEnter}
         >
-          {s =>
+          {s => (
             <ul className="list-container">
               {s.map(({ key, style, data }) => <Item key={key} style={style} {...data} />)}
-            </ul>}
+            </ul>
+          )}
         </TransitionMotion>
       </div>
     )

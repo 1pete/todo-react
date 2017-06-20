@@ -6,7 +6,6 @@ const Button = ({ active, children, onClick }) => (
   <button
     className={classNames('pt-button', 'pt-minimal', active && 'pt-active')}
     onClick={() => { onClick() }}
-    role="button"
   >
     {children}
   </button>
