@@ -17,8 +17,6 @@ test:
     - yarn flow
     - yarn test
     - yarn build
-  post:
-    - bash <(curl -s https://codecov.io/bash)
 deployment:
   master:
     branch: master

@@ -26,7 +26,7 @@ const renderApp = Component =>
       </Provider>
     </AppContainer>,
     document.getElementById('root'),
-)
+  )
 
 renderApp(App)
 
