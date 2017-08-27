@@ -1,5 +1,6 @@
 .item-todo {
   display: flex;
+  height: 42px;
   list-style: none;
   padding: 0 10px;
   background-color: #b2ebf2;
