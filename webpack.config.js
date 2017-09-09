@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const CleanPlugin = require('clean-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const FaviconsPlugin = require('favicons-webpack-plugin')
+const FaviconsPlugin = require('favicons-manifest-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
 
@@ -44,8 +44,8 @@ module.exports = (env) => {
           test: /\.css$/,
           use:
             isDev
-            ? ['style-loader', 'css-loader']
-            : ExtractTextPlugin.extract({ use: ['css-loader'] }),
+              ? ['style-loader', 'css-loader']
+              : ExtractTextPlugin.extract({ use: ['css-loader'] }),
         },
         {
           test: /\.(eot|svg|ttf|woff|woff2)$/,
@@ -84,8 +84,13 @@ module.exports = (env) => {
       new FaviconsPlugin({
         logo: path.resolve('src/logo.png'),
         prefix: 'icons/',
-        title: 'To-Do List',
-        background: '#0097A7',
+        options: {
+          appName: 'To-Do List',
+          background: '#0097A7',
+        },
+        html: {
+          separator: '\n    ',
+        },
       }),
       new OfflinePlugin({
         ServiceWorker: {
