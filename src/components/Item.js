@@ -6,7 +6,15 @@ import PropTypes from 'prop-types'
 
 import './Item.css'
 
-const Item = ({ id, title, dueDate, completed, onCheck, onDelete, style }) => {
+const Item = ({
+  id,
+  title,
+  dueDate,
+  completed,
+  onCheck,
+  onDelete,
+  style,
+}) => {
   const today = moment.utc().startOf('day')
   const getDueDateInfo = () => {
     const diff = today.diff(dueDate, 'day')

@@ -17,9 +17,7 @@ export default function configureStore() {
   persistStore(store, { keyPrefix: 'todo-react:' })
 
   if (__DEV__ && module.hot) {
-    module.hot.accept('./reducers', () =>
-      store.replaceReducer(reducers),
-    )
+    module.hot.accept('./reducers', () => store.replaceReducer(reducers))
   }
 
   return store

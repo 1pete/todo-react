@@ -1,11 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const CleanPlugin = require('clean-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const FaviconsPlugin = require('favicons-manifest-plugin')
+const { FaviconsWebpackPlugin } = require('favicons-manifest-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
 
@@ -19,14 +19,6 @@ module.exports = (env) => {
     context: root,
     entry: {
       app: [
-        'core-js/es6/array',
-        'core-js/es6/function',
-        'core-js/es6/number',
-        'core-js/es6/object',
-        'core-js/es6/promise',
-        'core-js/es6/string',
-        'core-js/es7/array',
-        'core-js/es7/string',
         '@blueprintjs/core/dist/blueprint.css',
         './src/index.css',
         './src/index.js',
@@ -81,7 +73,7 @@ module.exports = (env) => {
       new CleanPlugin(['dist'], { root }),
       new CopyPlugin([{ from: 'src/manifest.json' }]),
       new ExtractTextPlugin('styles.css'),
-      new FaviconsPlugin({
+      new FaviconsWebpackPlugin({
         logo: path.resolve('src/logo.png'),
         prefix: 'icons/',
         options: {
