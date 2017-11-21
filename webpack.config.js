@@ -62,6 +62,7 @@ module.exports = (env) => {
         },
         __DEV__: isDev,
       }),
+      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     ],
   }
 
