@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react'
 import { Route, HashRouter as Router } from 'react-router-dom'
 
@@ -5,7 +7,7 @@ import Home from '../pages/Home'
 import New from '../pages/New'
 import View from '../pages/View'
 
-export default () => (
+const App = () => (
   <Router>
     <div>
       <Route exact path="/" component={Home} />
@@ -14,3 +16,5 @@ export default () => (
     </div>
   </Router>
 )
+
+export default App

@@ -1,36 +1,38 @@
+// @flow
+
 import React, { Component } from 'react'
 import moment from 'moment'
-import PropTypes from 'prop-types'
 
-class Detail extends Component {
-  static contextTypes = {
-    router: PropTypes.object,
-  }
+type Props = {
+  title?: string,
+  dueDate?: any,
+  description?: string,
+  onSave: Function,
+  saveLabel?: string,
+  redirect?: boolean,
+}
 
-  static propTypes = {
-    title: PropTypes.string,
-    dueDate: PropTypes.any,
-    description: PropTypes.string,
-    onSave: PropTypes.func.isRequired,
-    saveLabel: PropTypes.string,
-    redirect: PropTypes.bool,
-  }
+type State = {
+  title: string,
+  dueDate: ?string,
+  description: string,
+}
 
-  static defaultProps = {
+const defaultProps = {
+  title: '',
+  dueDate: '',
+  description: '',
+  saveLabel: '',
+  redirect: false,
+}
+
+class Detail extends Component<Props, State> {
+  static defaultProps = defaultProps
+
+  state = {
     title: '',
-    dueDate: '',
+    dueDate: null,
     description: '',
-    saveLabel: '',
-    redirect: false,
-  }
-
-  constructor() {
-    super()
-    this.state = {}
-    this.onSave = this.onSave.bind(this)
-    this.handleTitleChange = this.handleTitleChange.bind(this)
-    this.handleDateChange = this.handleDateChange.bind(this)
-    this.handleDescriptionChange = this.handleDescriptionChange.bind(this)
   }
 
   componentWillMount() {
@@ -46,7 +48,7 @@ class Detail extends Component {
     })
   }
 
-  onSave() {
+  onSave = () => {
     let { title, dueDate, description } = this.state
 
     if (!title || !title.trim()) return
@@ -55,16 +57,16 @@ class Detail extends Component {
     this.context.router.history.push('/')
   }
 
-  handleTitleChange(event) {
+  handleTitleChange = (event) => {
     this.setState({ title: event.target.value })
   }
 
-  handleDateChange(event) {
+  handleDateChange = (event) => {
     let dateValue = event.target.value
     this.setState({ dueDate: dateValue ? moment.utc(dateValue) : null })
   }
 
-  handleDescriptionChange(event) {
+  handleDescriptionChange = (event) => {
     this.setState({ description: event.target.value })
   }
 

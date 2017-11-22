@@ -1,10 +1,22 @@
+// @flow
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 import classNames from 'classnames'
 import moment from 'moment'
-import PropTypes from 'prop-types'
 
 import './Item.css'
+
+
+type Props = {
+  id: string,
+  title: string,
+  dueDate?: string,
+  completed?: boolean,
+  onCheck: Function,
+  onDelete: Function,
+  style?: Object,
+}
 
 const Item = ({
   id,
@@ -14,7 +26,7 @@ const Item = ({
   onCheck,
   onDelete,
   style,
-}) => {
+}: Props) => {
   const today = moment.utc().startOf('day')
   const getDueDateInfo = () => {
     const diff = today.diff(dueDate, 'day')
@@ -52,18 +64,8 @@ const Item = ({
   )
 }
 
-Item.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  dueDate: PropTypes.any,
-  completed: PropTypes.bool,
-  onCheck: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-  style: PropTypes.object,
-}
-
 Item.defaultProps = {
-  dueDate: null,
+  dueDate: '',
   completed: false,
   style: null,
 }

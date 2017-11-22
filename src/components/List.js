@@ -1,11 +1,17 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import Item from '../containers/InteractiveItem'
 
 import './List.css'
 
-const List = ({ items, flag }) => {
+type Props = {
+  flag?: boolean,
+  items: Array<any>,
+}
+
+const List = ({ items, flag }: Props) => {
   const filteredItems = flag == null ? items : items.filter(item => !!item.completed === flag)
 
   return (
@@ -22,11 +28,6 @@ const List = ({ items, flag }) => {
       </ul>
     </div>
   )
-}
-
-List.propTypes = {
-  flag: PropTypes.bool,
-  items: PropTypes.array.isRequired,
 }
 
 List.defaultProps = {
