@@ -3,7 +3,6 @@ const webpack = require('webpack')
 
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const CleanPlugin = require('clean-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const { FaviconsWebpackPlugin } = require('favicons-manifest-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
@@ -72,7 +71,6 @@ module.exports = (env) => {
   } else {
     config.plugins.push(...[
       new CleanPlugin(['dist'], { root }),
-      new CopyPlugin([{ from: 'src/manifest.json' }]),
       new ExtractTextPlugin('styles.css'),
       new FaviconsWebpackPlugin({
         logo: path.resolve('src/logo.png'),
@@ -80,6 +78,7 @@ module.exports = (env) => {
         options: {
           appName: 'To-Do List',
           background: '#0097A7',
+          start_url: '/todo-react/?homescreen=1',
         },
         html: {
           separator: '\n    ',
