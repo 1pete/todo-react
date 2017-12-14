@@ -29,6 +29,8 @@ const Item = ({
 }: Props) => {
   const today = moment.utc().startOf('day')
   const getDueDateInfo = () => {
+    if (!dueDate) return null
+
     const diff = today.diff(dueDate, 'day')
     if (diff < -5) return null
 
