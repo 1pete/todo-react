@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const { FaviconsWebpackPlugin } = require('favicons-manifest-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const root = path.resolve()
 const dist = path.resolve('dist')
@@ -95,9 +96,7 @@ module.exports = (env) => {
         minimize: true,
       }),
       new webpack.optimize.ModuleConcatenationPlugin(),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: { warnings: false, screw_ie8: true },
-      }),
+      new UglifyJsPlugin(),
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',
         reportFilename: path.resolve('report.html'),
