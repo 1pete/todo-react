@@ -1,28 +1,22 @@
 // @flow
 
 import React from 'react'
-import PropTypes from 'prop-types'
+import { withRouter } from 'react-router-dom'
+
+import type { Match } from 'react-router-dom'
 
 import NavBar from '../components/NavBar'
 import ViewTodo from '../containers/ViewTodo'
 
-const ViewPage = ({ match: { params } }) => (
+type Props = {
+  match: Match,
+}
+
+const ViewPage = ({ match: { params } }: Props) => (
   <div>
     <NavBar showBack />
     <ViewTodo itemId={params.id} />
   </div>
 )
 
-ViewPage.contextTypes = {
-  router: PropTypes.object,
-}
-
-ViewPage.propTypes = {
-  match: PropTypes.object,
-}
-
-ViewPage.defaultProps = {
-  match: {},
-}
-
-export default ViewPage
+export default withRouter(ViewPage)

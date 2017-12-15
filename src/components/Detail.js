@@ -1,7 +1,10 @@
 // @flow
 
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import moment from 'moment'
+
+import type { RouterHistory } from 'react-router-dom'
 
 type Props = {
   title?: string,
@@ -10,6 +13,7 @@ type Props = {
   onSave: Function,
   saveLabel?: string,
   redirect?: boolean,
+  history: RouterHistory,
 }
 
 type State = {
@@ -37,7 +41,7 @@ class Detail extends Component<Props, State> {
 
   componentWillMount() {
     if (this.props.redirect) {
-      this.context.router.history.push('/')
+      this.props.history.push('/')
       return
     }
 
@@ -54,7 +58,7 @@ class Detail extends Component<Props, State> {
     if (!title || !title.trim()) return
 
     this.props.onSave({ title: title.trim(), dueDate, description: (description || '').trim() })
-    this.context.router.history.push('/')
+    this.props.history.push('/')
   }
 
   handleTitleChange = (event) => {
@@ -117,4 +121,4 @@ class Detail extends Component<Props, State> {
   }
 }
 
-export default Detail
+export default withRouter(Detail)

@@ -2,9 +2,14 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 
-const NavBar = ({ showAdd, showBack, title }) => (
+type Props = {
+  showAdd?: boolean,
+  showBack?: boolean,
+  title?: string,
+}
+
+const NavBar = ({ showAdd, showBack, title }: Props) => (
   <nav className="pt-navbar pt-dark header">
     <div className="pt-navbar-group pt-align-left">
       { showBack && <Link to="/" className="pt-button pt-minimal pt-icon-chevron-left" /> }
@@ -15,12 +20,6 @@ const NavBar = ({ showAdd, showBack, title }) => (
     </div>
   </nav>
 )
-
-NavBar.propTypes = {
-  showAdd: PropTypes.bool,
-  showBack: PropTypes.bool,
-  title: PropTypes.string,
-}
 
 NavBar.defaultProps = {
   showAdd: false,
