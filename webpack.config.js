@@ -21,7 +21,7 @@ module.exports = (env) => {
       app: [
         '@blueprintjs/core/dist/blueprint.css',
         './src/index.css',
-        './src/index.js',
+        './src/index.jsx',
       ],
     },
     output: {
@@ -31,7 +31,7 @@ module.exports = (env) => {
     },
     module: {
       rules: [
-        { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
+        { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
         {
           test: /\.css$/,
           use:
@@ -44,6 +44,9 @@ module.exports = (env) => {
           use: [{ loader: 'file-loader', options: { name: 'public/fonts/[name].[ext]' } }],
         },
       ],
+    },
+    resolve: {
+      extensions: ['.js', '.json', '.jsx'],
     },
     devtool: isDev ? 'eval-source-map' : 'source-map',
     recordsOutputPath: path.resolve('records.json'),
