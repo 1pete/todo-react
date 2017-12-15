@@ -4,7 +4,7 @@ general:
       - gh-pages
 machine:
   node:
-    version: 6
+    version: 8
 dependencies:
   override:
     - yarn
