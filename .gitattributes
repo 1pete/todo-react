@@ -7,6 +7,7 @@
 *.jade  text eol=lf
 *.js    text eol=lf
 *.json  text eol=lf
+*.jsx   text eol=lf
 *.less  text eol=lf
 *.lock  text eol=lf
 *.opts  text eol=lf
