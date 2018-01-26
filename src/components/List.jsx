@@ -11,7 +11,7 @@ type Props = {
   items: Array<any>,
 }
 
-const List = ({ items, flag }: Props) => {
+function List({ items, flag }: Props) {
   const filteredItems = flag == null ? items : items.filter(item => !!item.completed === flag)
 
   return (

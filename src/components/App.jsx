@@ -7,14 +7,16 @@ import Home from '../pages/Home'
 import New from '../pages/New'
 import View from '../pages/View'
 
-const App = () => (
-  <Router>
-    <div>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/new" component={New} />
-      <Route exact path="/item/:id" component={View} />
-    </div>
-  </Router>
-)
+function App() {
+  return (
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/new" component={New} />
+        <Route exact path="/item/:id" component={View} />
+      </div>
+    </Router>
+  )
+}
 
 export default App

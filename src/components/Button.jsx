@@ -10,13 +10,15 @@ type Props = {
   onClick: Function,
 }
 
-const Button = ({ active, children, onClick }: Props) => (
-  <button
-    className={classNames('pt-button', 'pt-minimal', active && 'pt-active')}
-    onClick={() => { onClick() }}
-  >
-    {children}
-  </button>
-)
+function Button({ active, children, onClick }: Props) {
+  return (
+    <button
+      className={classNames('pt-button', 'pt-minimal', active && 'pt-active')}
+      onClick={() => { onClick() }}
+    >
+      {children}
+    </button>
+  )
+}
 
 export default Button

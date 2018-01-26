@@ -12,11 +12,13 @@ type Props = {
   match: Match,
 }
 
-const ViewPage = ({ match: { params } }: Props) => (
-  <div>
-    <NavBar showBack />
-    <ViewTodo itemId={params.id} />
-  </div>
-)
+function ViewPage({ match: { params } }: Props) {
+  return (
+    <div>
+      <NavBar showBack />
+      <ViewTodo itemId={params.id} />
+    </div>
+  )
+}
 
 export default withRouter(ViewPage)

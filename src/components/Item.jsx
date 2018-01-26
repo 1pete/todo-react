@@ -18,7 +18,7 @@ type Props = {
   style?: Object,
 }
 
-const Item = ({
+function Item({
   id,
   title,
   dueDate,
@@ -26,7 +26,7 @@ const Item = ({
   onCheck,
   onDelete,
   style,
-}: Props) => {
+}: Props) {
   const today = moment.utc().startOf('day')
   const getDueDateInfo = () => {
     if (!dueDate) return null
