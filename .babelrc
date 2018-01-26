@@ -4,7 +4,7 @@
       "modules": false,
       "useBuiltIns": "entry",
       "targets": {
-        "browsers": ["chrome > 55", "safari >= 9"]
+        "browsers": ["chrome >= 60", "safari >= 10"]
       }
     }],
     "@babel/preset-flow",
