@@ -5,7 +5,8 @@
       "useBuiltIns": "entry",
       "targets": {
         "browsers": ["chrome >= 60", "safari >= 10"]
-      }
+      },
+      "exclude": ["web.timers", "web.immediate", "web.dom.iterable"]
     }],
     "@babel/preset-flow",
     "@babel/preset-react"
