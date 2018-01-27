@@ -47,6 +47,12 @@ module.exports = (env) => {
     },
     resolve: {
       extensions: ['.js', '.json', '.jsx'],
+      alias: {
+        'history/createMemoryHistory': path.resolve(__dirname, 'node_modules/history/es/createMemoryHistory'),
+        'history/createHashHistory': path.resolve(__dirname, 'node_modules/history/es/createHashHistory'),
+        'history/createBrowserHistory': path.resolve(__dirname, 'node_modules/history/es/createBrowserHistory'),
+        'history/PathUtils': path.resolve(__dirname, 'node_modules/history/es/PathUtils'),
+      },
     },
     devtool: isDev ? 'eval-source-map' : 'source-map',
     recordsOutputPath: path.resolve('records.json'),
