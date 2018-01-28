@@ -17,27 +17,19 @@ export const addTodo = (props: Object) => ({
   ...props,
 })
 
-export const editTodo = (props: Object) => ({
-  type: EDIT_TODO,
-  ...props,
-})
-
-export const deleteTodo = (id: string) => ({
-  type: DELETE_TODO,
-  id,
-})
-
 export const filterTodo = (status: string) => ({
   type: FILTER_TODO,
   status,
 })
 
-export const selectTodo = (id: string) => ({
-  type: SELECT_TODO,
-  id,
+export const editTodo = (props: Object) => ({
+  type: EDIT_TODO,
+  ...props,
 })
 
-export const toggleTodo = (id: string) => ({
-  type: TOGGLE_TODO,
-  id,
-})
+const doAction = (action: string) =>
+  (id: string) => ({ type: action, id })
+
+export const deleteTodo = doAction(DELETE_TODO)
+export const selectTodo = doAction(SELECT_TODO)
+export const toggleTodo = doAction(TOGGLE_TODO)

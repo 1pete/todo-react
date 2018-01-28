@@ -2,7 +2,12 @@
 
 import { FILTER_TODO } from '../actions'
 
-export default (state: string = 'ALL', action:{type: string, status: string}) => {
+type Action = {
+  type: string,
+  status: string,
+}
+
+export default (state: string = 'ALL', action: Action) => {
   switch (action.type) {
     case FILTER_TODO:
       return action.status

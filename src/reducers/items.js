@@ -28,13 +28,7 @@ export default (state: Array<Object> = [], { type, ...data }: Action) => {
   }
 
   if (type === DELETE_TODO) {
-    return state.reduce((result, item) => {
-      if (item.id === data.id) {
-        return result
-      }
-
-      return [...result, item]
-    }, [])
+    return state.filter(item => item.id !== data.id)
   }
 
   if (type === TOGGLE_TODO) {

@@ -14,7 +14,7 @@ function Button({ active, children, onClick }: Props) {
   return (
     <button
       className={classNames('pt-button', 'pt-minimal', active && 'pt-active')}
-      onClick={() => { onClick() }}
+      onClick={onClick}
     >
       {children}
     </button>

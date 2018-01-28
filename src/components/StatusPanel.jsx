@@ -4,13 +4,16 @@ import React from 'react'
 
 import FilterButton from '../containers/FilterButton'
 
+const createButton = (status, text) =>
+  <FilterButton status={status} size="small">{text}</FilterButton>
+
 export default function StatusPanel() {
   return (
     <nav className="pt-navbar footer">
       <div className="pt-navbar-group pt-minimal">
-        <FilterButton status="ALL" size="small">All</FilterButton>
-        <FilterButton status="ACTIVE" size="small">Active</FilterButton>
-        <FilterButton status="COMPLETED" size="small">Completed</FilterButton>
+        {createButton('ALL', 'all')}
+        {createButton('ACTIVE', 'Active')}
+        {createButton('COMPLETED', 'Completed')}
       </div>
     </nav>
   )
