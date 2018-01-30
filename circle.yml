@@ -15,7 +15,9 @@ test:
   override:
     - yarn lint
     - yarn flow
-    - yarn test
+    - yarn test --reporter xunit:
+        environment:
+          MOCHA_FILE: $CIRCLE_TEST_REPORTS/junit/test-results.xml
     - yarn build
 deployment:
   master:
