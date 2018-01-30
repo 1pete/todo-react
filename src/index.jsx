@@ -2,7 +2,6 @@ import '@babel/polyfill'
 import OfflineRuntime from 'offline-plugin/runtime'
 import React from 'react'
 import { render } from 'react-dom'
-import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
 
 import App from './components/App'
@@ -19,15 +18,27 @@ OfflineRuntime.install({
 
 let store = configureStore()
 
-const renderApp = Component =>
+let renderApp = Component =>
   render(
-    <AppContainer>
-      <Provider store={store}>
-        <Component />
-      </Provider>
-    </AppContainer>,
+    <Provider store={store}>
+      <Component />
+    </Provider>,
     document.getElementById('root'),
   )
+
+if (__DEV__) {
+  const { AppContainer } = require('react-hot-loader') // eslint-disable-line global-require
+
+  renderApp = Component =>
+    render(
+      <AppContainer>
+        <Provider store={store}>
+          <Component />
+        </Provider>
+      </AppContainer>,
+      document.getElementById('root'),
+    )
+}
 
 renderApp(App)
 
