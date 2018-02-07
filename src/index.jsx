@@ -3,6 +3,7 @@ import OfflineRuntime from 'offline-plugin/runtime'
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
 
 import App from './components/App'
 import configureStore from './configureStore'
@@ -16,29 +17,17 @@ OfflineRuntime.install({
   },
 })
 
-let store = configureStore()
+const { store, persistor } = configureStore()
 
 let renderApp = Component =>
   render(
     <Provider store={store}>
-      <Component />
+      <PersistGate persistor={persistor}>
+        <Component />
+      </PersistGate>
     </Provider>,
     document.getElementById('root'),
   )
-
-if (__DEV__) {
-  const { AppContainer } = require('react-hot-loader') // eslint-disable-line global-require
-
-  renderApp = Component =>
-    render(
-      <AppContainer>
-        <Provider store={store}>
-          <Component />
-        </Provider>
-      </AppContainer>,
-      document.getElementById('root'),
-    )
-}
 
 renderApp(App)
 

@@ -16,11 +16,6 @@
     ["@babel/plugin-proposal-object-rest-spread", { "useBuiltIns": true }]
   ],
   "env": {
-    "development": {
-      "plugins": [
-        "react-hot-loader/babel"
-      ]
-    },
     "test": {
       "plugins": [
         "@babel/plugin-transform-modules-commonjs"
