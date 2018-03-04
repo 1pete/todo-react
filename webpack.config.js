@@ -80,7 +80,6 @@ module.exports = (env) => {
   }
 
   if (isDev) {
-    config.entry.app.unshift('react-hot-loader/patch')
     config.plugins.push(new webpack.HotModuleReplacementPlugin())
   } else {
     config.plugins.push(...[
