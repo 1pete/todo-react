@@ -91,6 +91,7 @@ module.exports = (env) => {
         options: {
           appName: 'To-Do List',
           background: '#0097A7',
+          theme_color: '#0097A7',
           start_url: '/todo-react/?homescreen=1',
         },
         html: {
