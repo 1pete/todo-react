@@ -8,6 +8,7 @@
   "orientation": "any",
   "start_url": "/todo-react/?homescreen=1",
   "background_color": "#0097A7",
+  "theme_color": "#0097A7",
   "icons": [
     {
       "src": "android-chrome-36x36.png",
