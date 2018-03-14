@@ -18,6 +18,10 @@ html, body, #root, #root > * {
   background-color: #fafafa;
 }
 
+#root > .pt-non-ideal-state {
+  height: auto;
+}
+
 .pt-navbar.header {
   background-color: #00BCD4;
   box-shadow: none;
