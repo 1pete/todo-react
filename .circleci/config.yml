@@ -65,3 +65,8 @@ workflows:
           filters:
             branches:
               only: master
+
+general:
+  branches:
+    ignore:
+      - gh-pages
