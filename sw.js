@@ -3,8 +3,8 @@ var __wpo = {
     "main": [
       "./icons/android-chrome-36x36.png",
       "./icons/android-chrome-48x48.png",
-      "./icons/android-chrome-96x96.png",
       "./icons/android-chrome-72x72.png",
+      "./icons/android-chrome-96x96.png",
       "./icons/android-chrome-144x144.png",
       "./icons/android-chrome-192x192.png",
       "./icons/android-chrome-256x256.png",
@@ -26,11 +26,11 @@ var __wpo = {
       "./icons/favicon-32x32.png",
       "./icons/favicon.ico",
       "./icons/apple-touch-startup-image-320x460.png",
-      "./icons/apple-touch-startup-image-640x920.png",
       "./icons/apple-touch-startup-image-640x1096.png",
+      "./icons/apple-touch-startup-image-640x920.png",
       "./icons/apple-touch-startup-image-748x1024.png",
-      "./icons/apple-touch-startup-image-750x1294.png",
       "./icons/apple-touch-startup-image-768x1004.png",
+      "./icons/apple-touch-startup-image-750x1294.png",
       "./icons/apple-touch-startup-image-1182x2208.png",
       "./icons/apple-touch-startup-image-1242x2148.png",
       "./icons/apple-touch-startup-image-1496x2048.png",
@@ -40,12 +40,12 @@ var __wpo = {
       "./icons/firefox_app_512x512.png",
       "./icons/manifest.json",
       "./icons/manifest.webapp",
-      "./public/fonts/icons-16.eot",
-      "./public/fonts/icons-16.woff",
-      "./public/fonts/icons-16.ttf",
-      "./public/fonts/icons-20.eot",
-      "./public/fonts/icons-20.woff",
       "./public/fonts/icons-20.ttf",
+      "./public/fonts/icons-20.woff",
+      "./public/fonts/icons-20.eot",
+      "./public/fonts/icons-16.ttf",
+      "./public/fonts/icons-16.woff",
+      "./public/fonts/icons-16.eot",
       "./app.js",
       "./styles.css",
       "./"
@@ -57,8 +57,8 @@ var __wpo = {
   "hashesMap": {
     "3d7dc55a34e404a77052c7f9013d15d621fbf504": "./icons/android-chrome-36x36.png",
     "de058e4f335f03fd8e8910417b66a590390d48f0": "./icons/android-chrome-48x48.png",
-    "ede96f9bb4f42f7a950f18157dc03f7aab33eb5f": "./icons/android-chrome-96x96.png",
     "d7d377e93dc7979567f5eb08f4bf55a6abf25d82": "./icons/android-chrome-72x72.png",
+    "ede96f9bb4f42f7a950f18157dc03f7aab33eb5f": "./icons/android-chrome-96x96.png",
     "09fc5f6086573b10f6d3f90d4837dec8f61278eb": "./icons/android-chrome-144x144.png",
     "f8f365b3e4eb37ada90eb81ff58f9265e39b07e8": "./icons/android-chrome-192x192.png",
     "757cc963e78e00d10bbc3870ce1492a5e3488075": "./icons/android-chrome-256x256.png",
@@ -78,11 +78,11 @@ var __wpo = {
     "7547bea8c13409eb2a156e783b0f1fde87ca7b39": "./icons/favicon-32x32.png",
     "914e965546af048e12fd2cad99b0e5717d3353ef": "./icons/favicon.ico",
     "15727649c5616991c15c35b0a60490ef7094a557": "./icons/apple-touch-startup-image-320x460.png",
-    "96cdd284c167c4293970e094abce97571b6db8c6": "./icons/apple-touch-startup-image-640x920.png",
     "8918e8eb2d71b72744bf06f8b22c41078fc2a191": "./icons/apple-touch-startup-image-640x1096.png",
+    "96cdd284c167c4293970e094abce97571b6db8c6": "./icons/apple-touch-startup-image-640x920.png",
     "ba4446ddd93e58bde8449ba92472240c3422e53d": "./icons/apple-touch-startup-image-748x1024.png",
-    "f109e02075e4418667417a3aa999e19c4e373099": "./icons/apple-touch-startup-image-750x1294.png",
     "6e8a740000807cb3e76d2242d99e3377277e696a": "./icons/apple-touch-startup-image-768x1004.png",
+    "f109e02075e4418667417a3aa999e19c4e373099": "./icons/apple-touch-startup-image-750x1294.png",
     "8297572802f8b59be5e3447c183436cb0ea2c829": "./icons/apple-touch-startup-image-1182x2208.png",
     "214112c065f1f44d22b487593c9a3da50a3c5ca4": "./icons/apple-touch-startup-image-1242x2148.png",
     "5649d88ac28c6ada8c16fd9c4dcf0ceee1a969b7": "./icons/apple-touch-startup-image-1496x2048.png",
@@ -92,19 +92,19 @@ var __wpo = {
     "ff6cb36935bd45c0bd9315b9fb47818d21b93005": "./icons/firefox_app_512x512.png",
     "c34eaee30a689214c38130457256f123cc27ab8f": "./icons/manifest.json",
     "8995de99943f00a73b61eeea10a4e53d56aa48c2": "./icons/manifest.webapp",
-    "c3da56cd9573bc44595a8d242d245e3a7cbcce8f": "./public/fonts/icons-16.eot",
-    "6d80481b51e26e433286a4d7e87fb25702f9ab0d": "./public/fonts/icons-16.woff",
-    "a0d6966a180749b94eb82c7cab86d3b282366b67": "./public/fonts/icons-16.ttf",
-    "4d24420b7d4520cdc1225444f58501d00dd53124": "./public/fonts/icons-20.eot",
-    "e6a8d008cbf96ba7f2e637541c4d506fc0abd541": "./public/fonts/icons-20.woff",
     "f8b8fed6aec7476c98538cdf27fcaa6b16d7c0d7": "./public/fonts/icons-20.ttf",
-    "9957da512321ddfdfce8ce6a23a4bf267ec7f0e6": "./app.js",
+    "e6a8d008cbf96ba7f2e637541c4d506fc0abd541": "./public/fonts/icons-20.woff",
+    "4d24420b7d4520cdc1225444f58501d00dd53124": "./public/fonts/icons-20.eot",
+    "a0d6966a180749b94eb82c7cab86d3b282366b67": "./public/fonts/icons-16.ttf",
+    "6d80481b51e26e433286a4d7e87fb25702f9ab0d": "./public/fonts/icons-16.woff",
+    "c3da56cd9573bc44595a8d242d245e3a7cbcce8f": "./public/fonts/icons-16.eot",
+    "d5b43f0ee5443ddae254a57f20d8d0b2e2d2d49c": "./app.js",
     "5619e59a5150fe770f0c3981238f72821e353d67": "./styles.css",
     "70d774504e862be1b4ee6d6990fdb60f2cac7a8d": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2018-3-31 14:19:06",
+  "version": "2018-4-9 17:35:10",
   "name": "webpack-offline:todo-react",
   "pluginVersion": "4.9.0",
   "relativePaths": true
@@ -156,6 +156,11 @@ var __wpo = {
 /******/ 		}
 /******/ 	};
 /******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -171,12 +176,19 @@ var __wpo = {
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -999,14 +1011,8 @@ loaders: {},
 cacheMaps: [],
 navigationPreload: false,
 });
-        module.exports = __webpack_require__(1)
+        module.exports = __webpack_require__(0)
       
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-
 
 /***/ })
 /******/ ]);
