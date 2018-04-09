@@ -7,7 +7,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const { FaviconsWebpackPlugin } = require('favicons-manifest-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const root = path.resolve()
 const dist = path.resolve('dist')
@@ -87,6 +86,7 @@ module.exports = (env) => {
       new ExtractTextPlugin('styles.css'),
       new FaviconsWebpackPlugin({
         logo: path.resolve('src/logo.png'),
+        inject: true,
         prefix: 'icons/',
         options: {
           appName: 'To-Do List',
@@ -102,6 +102,7 @@ module.exports = (env) => {
         ServiceWorker: {
           cacheName: 'todo-react',
           events: true,
+          minify: false,
         },
         AppCache: false,
       }),
@@ -109,7 +110,6 @@ module.exports = (env) => {
         minimize: true,
       }),
       new webpack.optimize.ModuleConcatenationPlugin(),
-      new UglifyJsPlugin(),
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',
         reportFilename: path.resolve('report.html'),
