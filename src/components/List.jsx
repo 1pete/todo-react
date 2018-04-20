@@ -31,7 +31,7 @@ function List({ items, flag }: Props) {
 }
 
 List.defaultProps = {
-  flag: null,
+  flag: undefined,
 }
 
 export default List

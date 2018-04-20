@@ -2,6 +2,8 @@
 
 import { connect } from 'react-redux'
 
+import type { Dispatch } from 'redux'
+
 import Detail from '../components/Detail'
 
 import { editTodo } from '../actions'
@@ -18,7 +20,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps) => ({
   onSave: ({ title, dueDate, description }) => {
     dispatch(editTodo({
       id: ownProps.itemId,

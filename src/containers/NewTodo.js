@@ -3,6 +3,8 @@
 import { connect } from 'react-redux'
 import moment from 'moment'
 
+import type { Dispatch } from 'redux'
+
 import Detail from '../components/Detail'
 
 import { addTodo } from '../actions'
@@ -12,7 +14,7 @@ const mapStateToProps = () => ({
   saveLabel: 'Add',
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Dispatch<any>) => ({
   onSave: ({ title, dueDate, description }) => {
     dispatch(addTodo({ title, dueDate, description }))
   },

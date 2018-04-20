@@ -69,7 +69,7 @@ function Item({
 Item.defaultProps = {
   dueDate: '',
   completed: false,
-  style: null,
+  style: undefined,
 }
 
 export default Item

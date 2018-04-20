@@ -7,12 +7,16 @@ import {
   TOGGLE_TODO,
 } from '../actions'
 
-type Action = {
-  type: string,
+type Todo = {
   id: string,
+  completed: boolean,
 }
 
-export default (state: Array<Object> = [], { type, ...data }: Action) => {
+type Action = Todo & {
+  type: string,
+}
+
+export default (state: Array<Todo> = [], { type, ...data }: Action): Array<Todo> => {
   if (type === ADD_TODO) {
     return [...state, data]
   }
