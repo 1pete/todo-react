@@ -109,7 +109,6 @@ module.exports = (env) => {
       new webpack.LoaderOptionsPlugin({
         minimize: true,
       }),
-      new webpack.optimize.ModuleConcatenationPlugin(),
       new BundleAnalyzerPlugin({
         analyzerMode: 'static',
         reportFilename: path.resolve('report.html'),
