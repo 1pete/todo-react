@@ -18,26 +18,26 @@ var __wpo = {
       "./icons/apple-touch-icon-120x120.png",
       "./icons/apple-touch-icon-144x144.png",
       "./icons/apple-touch-icon-152x152.png",
-      "./icons/apple-touch-icon-180x180.png",
       "./icons/apple-touch-icon-167x167.png",
+      "./icons/apple-touch-icon-180x180.png",
       "./icons/apple-touch-icon.png",
       "./icons/apple-touch-icon-precomposed.png",
       "./icons/favicon-16x16.png",
       "./icons/favicon-32x32.png",
       "./icons/favicon.ico",
-      "./icons/apple-touch-startup-image-320x460.png",
-      "./icons/apple-touch-startup-image-640x920.png",
-      "./icons/apple-touch-startup-image-640x1096.png",
-      "./icons/apple-touch-startup-image-748x1024.png",
-      "./icons/apple-touch-startup-image-750x1294.png",
-      "./icons/apple-touch-startup-image-768x1004.png",
-      "./icons/apple-touch-startup-image-1242x2148.png",
-      "./icons/apple-touch-startup-image-1182x2208.png",
-      "./icons/apple-touch-startup-image-1496x2048.png",
-      "./icons/apple-touch-startup-image-1536x2008.png",
       "./icons/firefox_app_60x60.png",
       "./icons/firefox_app_128x128.png",
       "./icons/firefox_app_512x512.png",
+      "./icons/apple-touch-startup-image-320x460.png",
+      "./icons/apple-touch-startup-image-640x920.png",
+      "./icons/apple-touch-startup-image-748x1024.png",
+      "./icons/apple-touch-startup-image-640x1096.png",
+      "./icons/apple-touch-startup-image-768x1004.png",
+      "./icons/apple-touch-startup-image-750x1294.png",
+      "./icons/apple-touch-startup-image-1182x2208.png",
+      "./icons/apple-touch-startup-image-1242x2148.png",
+      "./icons/apple-touch-startup-image-1496x2048.png",
+      "./icons/apple-touch-startup-image-1536x2008.png",
       "./icons/manifest.json",
       "./icons/manifest.webapp",
       "./public/fonts/icons-20.ttf",
@@ -72,24 +72,24 @@ var __wpo = {
     "663d59ec6155bb7236a28658a518b102bf48bc1b": "./icons/apple-touch-icon-120x120.png",
     "0f3d8d39ff84e2e36f040f8ccea26ec59ade54d8": "./icons/apple-touch-icon-144x144.png",
     "d80e904ce456bef73ad8ac3909c685c9a0fa1692": "./icons/apple-touch-icon-152x152.png",
-    "2383a3383396d7fd95e008bcc2c8f9202a504283": "./icons/apple-touch-icon-precomposed.png",
     "f11226f330392b291c764be4c32f914cbec4c3cf": "./icons/apple-touch-icon-167x167.png",
+    "2383a3383396d7fd95e008bcc2c8f9202a504283": "./icons/apple-touch-icon-precomposed.png",
     "5719b910baf1ab07dd682560cbb4b946cf377f72": "./icons/favicon-16x16.png",
     "7547bea8c13409eb2a156e783b0f1fde87ca7b39": "./icons/favicon-32x32.png",
     "914e965546af048e12fd2cad99b0e5717d3353ef": "./icons/favicon.ico",
-    "15727649c5616991c15c35b0a60490ef7094a557": "./icons/apple-touch-startup-image-320x460.png",
-    "96cdd284c167c4293970e094abce97571b6db8c6": "./icons/apple-touch-startup-image-640x920.png",
-    "8918e8eb2d71b72744bf06f8b22c41078fc2a191": "./icons/apple-touch-startup-image-640x1096.png",
-    "ba4446ddd93e58bde8449ba92472240c3422e53d": "./icons/apple-touch-startup-image-748x1024.png",
-    "f109e02075e4418667417a3aa999e19c4e373099": "./icons/apple-touch-startup-image-750x1294.png",
-    "6e8a740000807cb3e76d2242d99e3377277e696a": "./icons/apple-touch-startup-image-768x1004.png",
-    "214112c065f1f44d22b487593c9a3da50a3c5ca4": "./icons/apple-touch-startup-image-1242x2148.png",
-    "8297572802f8b59be5e3447c183436cb0ea2c829": "./icons/apple-touch-startup-image-1182x2208.png",
-    "5649d88ac28c6ada8c16fd9c4dcf0ceee1a969b7": "./icons/apple-touch-startup-image-1496x2048.png",
-    "ef1e2582865e0bbe226ef99b34adfecbf1d832fb": "./icons/apple-touch-startup-image-1536x2008.png",
     "6d9a89264f5d8ced3bf5c95d16791c78ae96bb77": "./icons/firefox_app_60x60.png",
     "1bd2f262a41478907368f84524368aefc368fa02": "./icons/firefox_app_128x128.png",
     "ff6cb36935bd45c0bd9315b9fb47818d21b93005": "./icons/firefox_app_512x512.png",
+    "15727649c5616991c15c35b0a60490ef7094a557": "./icons/apple-touch-startup-image-320x460.png",
+    "96cdd284c167c4293970e094abce97571b6db8c6": "./icons/apple-touch-startup-image-640x920.png",
+    "ba4446ddd93e58bde8449ba92472240c3422e53d": "./icons/apple-touch-startup-image-748x1024.png",
+    "8918e8eb2d71b72744bf06f8b22c41078fc2a191": "./icons/apple-touch-startup-image-640x1096.png",
+    "6e8a740000807cb3e76d2242d99e3377277e696a": "./icons/apple-touch-startup-image-768x1004.png",
+    "f109e02075e4418667417a3aa999e19c4e373099": "./icons/apple-touch-startup-image-750x1294.png",
+    "8297572802f8b59be5e3447c183436cb0ea2c829": "./icons/apple-touch-startup-image-1182x2208.png",
+    "214112c065f1f44d22b487593c9a3da50a3c5ca4": "./icons/apple-touch-startup-image-1242x2148.png",
+    "5649d88ac28c6ada8c16fd9c4dcf0ceee1a969b7": "./icons/apple-touch-startup-image-1496x2048.png",
+    "ef1e2582865e0bbe226ef99b34adfecbf1d832fb": "./icons/apple-touch-startup-image-1536x2008.png",
     "c34eaee30a689214c38130457256f123cc27ab8f": "./icons/manifest.json",
     "8995de99943f00a73b61eeea10a4e53d56aa48c2": "./icons/manifest.webapp",
     "f8b8fed6aec7476c98538cdf27fcaa6b16d7c0d7": "./public/fonts/icons-20.ttf",
@@ -98,15 +98,15 @@ var __wpo = {
     "a0d6966a180749b94eb82c7cab86d3b282366b67": "./public/fonts/icons-16.ttf",
     "6d80481b51e26e433286a4d7e87fb25702f9ab0d": "./public/fonts/icons-16.woff",
     "c3da56cd9573bc44595a8d242d245e3a7cbcce8f": "./public/fonts/icons-16.eot",
-    "3a90b989a05c9faca79338ac3a32bd5317b07761": "./app.js",
+    "b7429f17fe2a28d986b71616d93a683a6d610fc4": "./app.js",
     "5619e59a5150fe770f0c3981238f72821e353d67": "./styles.css",
     "70d774504e862be1b4ee6d6990fdb60f2cac7a8d": "./"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2018-4-20 19:41:35",
+  "version": "2018-4-27 15:12:25",
   "name": "webpack-offline:todo-react",
-  "pluginVersion": "4.9.0",
+  "pluginVersion": "5.0.0",
   "relativePaths": true
 };
 
@@ -241,7 +241,6 @@ if (typeof DEBUG === 'undefined') {
 }
 
 function WebpackServiceWorker(params, helpers) {
-  var loaders = helpers.loaders;
   var cacheMaps = helpers.cacheMaps;
   // navigationPreload: true, { map: (URL) => URL, test: (URL) => boolean }
   var navigationPreload = helpers.navigationPreload;
@@ -252,10 +251,14 @@ function WebpackServiceWorker(params, helpers) {
   var responseStrategy = params.responseStrategy;
 
   var assets = params.assets;
-  var loadersMap = params.loaders || {};
 
   var hashesMap = params.hashesMap;
   var externals = params.externals;
+
+  var prefetchRequest = params.prefetchRequest || {
+    credentials: 'same-origin',
+    mode: 'cors'
+  };
 
   var CACHE_PREFIX = params.name;
   var CACHE_TAG = params.version;
@@ -267,11 +270,6 @@ function WebpackServiceWorker(params, helpers) {
   mapAssets();
 
   var allAssets = [].concat(assets.main, assets.additional, assets.optional);
-
-  // Deprecated {
-  var navigateFallbackURL = params.navigateFallbackURL;
-  var navigateFallbackForRedirects = params.navigateFallbackForRedirects;
-  // }
 
   self.addEventListener('install', function (event) {
     console.log('[SW]:', 'Install event');
@@ -338,7 +336,8 @@ function WebpackServiceWorker(params, helpers) {
     return caches.open(CACHE_NAME).then(function (cache) {
       return addAllNormalized(cache, batch, {
         bust: params.version,
-        request: params.prefetchRequest
+        request: prefetchRequest,
+        failAll: section === 'main'
       });
     }).then(function () {
       logGroup('Cached assets: ' + section, batch);
@@ -420,7 +419,9 @@ function WebpackServiceWorker(params, helpers) {
 
         return Promise.all([move, addAllNormalized(cache, changed, {
           bust: params.version,
-          request: params.prefetchRequest
+          request: prefetchRequest,
+          failAll: section === 'main',
+          deleteFirst: section !== 'main'
         })]);
       });
     });
@@ -479,6 +480,11 @@ function WebpackServiceWorker(params, helpers) {
   }
 
   self.addEventListener('fetch', function (event) {
+    // Handle only GET requests
+    if (event.request.method !== 'GET') {
+      return;
+    }
+
     var url = new URL(event.request.url);
     url.hash = '';
 
@@ -491,8 +497,6 @@ function WebpackServiceWorker(params, helpers) {
       urlString = url.toString();
     }
 
-    // Handle only GET requests
-    var isGET = event.request.method === 'GET';
     var assetMatches = allAssets.indexOf(urlString) !== -1;
     var cacheUrl = urlString;
 
@@ -505,22 +509,18 @@ function WebpackServiceWorker(params, helpers) {
       }
     }
 
-    if (!assetMatches && isGET) {
-      // If isn't a cached asset and is a navigation request,
-      // perform network request and fallback to navigateFallbackURL if available.
-      //
-      // Requesting with fetchWithPreload().
-      // Preload is used only if navigationPreload is enabled and
-      // navigationPreload mapping is not used.
-      if (navigateFallbackURL && isNavigateRequest(event.request)) {
-        event.respondWith(handleNavigateFallback(fetchWithPreload(event)));
-
-        return;
-      }
-
-      if (navigationPreload === true) {
-        event.respondWith(fetchWithPreload(event));
-        return;
+    if (!assetMatches) {
+      // Use request.mode === 'navigate' instead of isNavigateRequest
+      // because everything what supports navigationPreload supports
+      // 'navigate' request.mode
+      if (event.request.mode === 'navigate') {
+        // Requesting with fetchWithPreload().
+        // Preload is used only if navigationPreload is enabled and
+        // navigationPreload mapping is not used.
+        if (navigationPreload === true) {
+          event.respondWith(fetchWithPreload(event));
+          return;
+        }
       }
 
       // Something else, positive, but not `true`
@@ -533,22 +533,11 @@ function WebpackServiceWorker(params, helpers) {
         }
       }
 
-      // Logic exists here if no cache match, or no preload
-      return;
-    }
-
-    if (!assetMatches || !isGET) {
-      // Fix for https://twitter.com/wanderview/status/696819243262873600
-      if (url.origin !== location.origin && navigator.userAgent.indexOf('Firefox/44.') !== -1) {
-        event.respondWith(fetch(event.request));
-      }
-
       // Logic exists here if no cache match
       return;
     }
 
     // Cache handling/storing/fetching starts here
-
     var resource = undefined;
 
     if (responseStrategy === 'network-first') {
@@ -559,10 +548,6 @@ function WebpackServiceWorker(params, helpers) {
     else {
         resource = cacheFirstResponse(event, urlString, cacheUrl);
       }
-
-    if (navigateFallbackURL && isNavigateRequest(event.request)) {
-      resource = handleNavigateFallback(resource);
-    }
 
     event.respondWith(resource);
   });
@@ -636,16 +621,28 @@ function WebpackServiceWorker(params, helpers) {
       }
 
       // Throw to reach the code in the catch below
-      throw new Error('Response is not ok');
+      throw response;
     })
     // This needs to be in a catch() and not just in the then() above
     // cause if your network is down, the fetch() will throw
-    ['catch'](function () {
+    ['catch'](function (erroredResponse) {
       if (DEBUG) {
         console.log('[SW]:', 'URL [' + urlString + '] from cache if possible');
       }
 
-      return cachesMatch(cacheUrl, CACHE_NAME);
+      return cachesMatch(cacheUrl, CACHE_NAME).then(function (response) {
+        if (response) {
+          return response;
+        }
+
+        if (erroredResponse instanceof Response) {
+          return erroredResponse;
+        }
+
+        // Not a response at this point, some other error
+        throw erroredResponse;
+        // return Response.error();
+      });
     });
   }
 
@@ -759,40 +756,9 @@ function WebpackServiceWorker(params, helpers) {
     });
   }
 
-  function handleNavigateFallback(fetching) {
-    return fetching['catch'](function () {}).then(function (response) {
-      var isOk = response && response.ok;
-      var isRedirect = response && response.type === 'opaqueredirect';
-
-      if (isOk || isRedirect && !navigateFallbackForRedirects) {
-        return response;
-      }
-
-      if (DEBUG) {
-        console.log('[SW]:', 'Loading navigation fallback [' + navigateFallbackURL + '] from cache');
-      }
-
-      return cachesMatch(navigateFallbackURL, CACHE_NAME);
-    });
-  }
-
   function mapAssets() {
     Object.keys(assets).forEach(function (key) {
       assets[key] = assets[key].map(function (path) {
-        var url = new URL(path, location);
-
-        url.hash = '';
-
-        if (externals.indexOf(path) === -1) {
-          url.search = '';
-        }
-
-        return url.toString();
-      });
-    });
-
-    Object.keys(loadersMap).forEach(function (key) {
-      loadersMap[key] = loadersMap[key].map(function (path) {
         var url = new URL(path, location);
 
         url.hash = '';
@@ -823,73 +789,58 @@ function WebpackServiceWorker(params, helpers) {
   }
 
   function addAllNormalized(cache, requests, options) {
-    var allowLoaders = options.allowLoaders !== false;
-    var bustValue = options && options.bust;
+    var bustValue = options.bust;
+    var failAll = options.failAll !== false;
+    var deleteFirst = options.deleteFirst === true;
     var requestInit = options.request || {
       credentials: 'omit',
       mode: 'cors'
     };
+
+    var deleting = Promise.resolve();
+
+    if (deleteFirst) {
+      deleting = Promise.all(requests.map(function (request) {
+        return cache['delete'](request)['catch'](function () {});
+      }));
+    }
 
     return Promise.all(requests.map(function (request) {
       if (bustValue) {
         request = applyCacheBust(request, bustValue);
       }
 
-      return fetch(request, requestInit).then(fixRedirectedResponse);
+      return fetch(request, requestInit).then(fixRedirectedResponse).then(function (response) {
+        if (!response.ok) {
+          return { error: true };
+        }
+
+        return { response: response };
+      }, function () {
+        return { error: true };
+      });
     })).then(function (responses) {
-      if (responses.some(function (response) {
-        return !response.ok;
+      if (failAll && responses.some(function (data) {
+        return data.error;
       })) {
         return Promise.reject(new Error('Wrong response status'));
       }
 
-      var extracted = [];
-      var addAll = responses.map(function (response, i) {
-        if (allowLoaders) {
-          extracted.push(extractAssetsWithLoaders(requests[i], response));
-        }
+      if (!failAll) {
+        responses = responses.filter(function (data) {
+          return !data.error;
+        });
+      }
 
-        return cache.put(requests[i], response);
+      return deleting.then(function () {
+        var addAll = responses.map(function (_ref, i) {
+          var response = _ref.response;
+
+          return cache.put(requests[i], response);
+        });
+
+        return Promise.all(addAll);
       });
-
-      if (extracted.length) {
-        (function () {
-          var newOptions = copyObject(options);
-          newOptions.allowLoaders = false;
-
-          var waitAll = addAll;
-
-          addAll = Promise.all(extracted).then(function (all) {
-            var extractedRequests = [].concat.apply([], all);
-
-            if (requests.length) {
-              waitAll = waitAll.concat(addAllNormalized(cache, extractedRequests, newOptions));
-            }
-
-            return Promise.all(waitAll);
-          });
-        })();
-      } else {
-        addAll = Promise.all(addAll);
-      }
-
-      return addAll;
-    });
-  }
-
-  function extractAssetsWithLoaders(request, response) {
-    var all = Object.keys(loadersMap).map(function (key) {
-      var loader = loadersMap[key];
-
-      if (loader.indexOf(request) !== -1 && loaders[key]) {
-        return loaders[key](response.clone());
-      }
-    }).filter(function (a) {
-      return !!a;
-    });
-
-    return Promise.all(all).then(function (all) {
-      return [].concat.apply([], all);
     });
   }
 
@@ -944,7 +895,7 @@ function cachesMatch(request, cacheName) {
   return caches.match(request, {
     cacheName: cacheName
   }).then(function (response) {
-    if (isNotRedirectedResponse()) {
+    if (isNotRedirectedResponse(response)) {
       return response;
     }
 
