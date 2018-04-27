@@ -102,9 +102,7 @@ module.exports = (env) => {
         ServiceWorker: {
           cacheName: 'todo-react',
           events: true,
-          minify: false,
         },
-        AppCache: false,
       }),
       new webpack.LoaderOptionsPlugin({
         minimize: true,

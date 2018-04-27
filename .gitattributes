@@ -2,17 +2,12 @@
 
 .*      text eol=lf
 *.css   text eol=lf
-*.ejs   text eol=lf
 *.html  text eol=lf
-*.jade  text eol=lf
 *.js    text eol=lf
 *.json  text eol=lf
-*.jsx   text eol=lf
 *.less  text eol=lf
 *.lock  text eol=lf
 *.opts  text eol=lf
 *.scss  text eol=lf
 *.md    text eol=lf
 *.sh    text eol=lf
-*.txt   text eol=lf
-*.xml   text eol=lf
