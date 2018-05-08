@@ -20,7 +20,7 @@ module.exports = (env) => {
       app: [
         '@blueprintjs/core/dist/blueprint.css',
         './src/index.css',
-        './src/index.jsx',
+        './src/index.js',
       ],
     },
     output: {
@@ -30,7 +30,7 @@ module.exports = (env) => {
     },
     module: {
       rules: [
-        { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
+        { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
         {
           test: /\.css$/,
           use:
@@ -45,7 +45,6 @@ module.exports = (env) => {
       ],
     },
     resolve: {
-      extensions: ['.js', '.json', '.jsx'],
       alias: {
         'history/createMemoryHistory': path.resolve(__dirname, 'node_modules/history/es/createMemoryHistory'),
         'history/createHashHistory': path.resolve(__dirname, 'node_modules/history/es/createHashHistory'),
