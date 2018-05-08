@@ -1,12 +1,9 @@
 parser: babel-eslint
-extends: airbnb
+extends: 1pete-react
 globals:
   __DEV__: true
 env:
   browser: true
-rules:
-  prefer-const: off
-  semi: [error, never]
 overrides:
   - files: ['*.spec.js']
     env:

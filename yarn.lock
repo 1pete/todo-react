@@ -3170,17 +3170,13 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-airbnb-base@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-12.1.0.tgz#386441e54a12ccd957b0a92564a4bafebd747944"
+eslint-config-1pete-react@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-1pete-react/-/eslint-config-1pete-react-0.0.1.tgz#979d81116e1497d2208e13826c6485f37ea65b0f"
   dependencies:
-    eslint-restricted-globals "^0.1.1"
-
-eslint-config-airbnb@~16.1.0:
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-16.1.0.tgz#2546bfb02cc9fe92284bf1723ccf2e87bc45ca46"
-  dependencies:
-    eslint-config-airbnb-base "^12.1.0"
+    eslint-plugin-import "^2.11.0"
+    eslint-plugin-jsx-a11y "^6.0.0"
+    eslint-plugin-react "^7.7.0"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.2"
@@ -3202,7 +3198,7 @@ eslint-plugin-flowtype@~2.46.0:
   dependencies:
     lodash "^4.15.0"
 
-eslint-plugin-import@~2.11.0:
+eslint-plugin-import@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.11.0.tgz#15aeea37a67499d848e8e981806d4627b5503816"
   dependencies:
@@ -3217,7 +3213,7 @@ eslint-plugin-import@~2.11.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-jsx-a11y@~6.0.0:
+eslint-plugin-jsx-a11y@^6.0.0:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.0.3.tgz#54583d1ae442483162e040e13cc31865465100e5"
   dependencies:
@@ -3229,7 +3225,7 @@ eslint-plugin-jsx-a11y@~6.0.0:
     emoji-regex "^6.1.0"
     jsx-ast-utils "^2.0.0"
 
-eslint-plugin-react@~7.7.0:
+eslint-plugin-react@^7.7.0:
   version "7.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.7.0.tgz#f606c719dbd8a1a2b3d25c16299813878cca0160"
   dependencies:
@@ -3237,10 +3233,6 @@ eslint-plugin-react@~7.7.0:
     has "^1.0.1"
     jsx-ast-utils "^2.0.1"
     prop-types "^15.6.0"
-
-eslint-restricted-globals@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-restricted-globals/-/eslint-restricted-globals-0.1.1.tgz#35f0d5cbc64c2e3ed62e93b4b1a7af05ba7ed4d7"
 
 eslint-scope@^3.7.1, eslint-scope@~3.7.1:
   version "3.7.1"
