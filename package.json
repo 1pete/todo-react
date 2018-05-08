@@ -4,7 +4,7 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --env prod --mode production",
     "deploy": "gh-pages -d dist",
-    "lint": "eslint --ext js --ext jsx src test",
+    "lint": "eslint src test",
     "flow": "flow check",
     "test": "NODE_ENV=test mocha --require @babel/register --require @babel/polyfill test/**/*.spec.js",
     "test:watch": "NODE_ENV=test mocha --watch --require @babel/register --require @babel/polyfill test/**/*.spec.js"
