@@ -15,6 +15,7 @@ function Button({ active, children, onClick }: Props) {
     <button
       className={classNames('pt-button', 'pt-minimal', active && 'pt-active')}
       onClick={onClick}
+      type="button"
     >
       {children}
     </button>

@@ -13,11 +13,17 @@ function NavBar({ showAdd, showBack, title }: Props) {
   return (
     <nav className="pt-navbar pt-dark header">
       <div className="pt-navbar-group pt-align-left">
-        { showBack && <Link to="/" className="pt-button pt-minimal pt-icon-chevron-left" /> }
-        <div className="pt-navbar-heading">{ title || 'To-Do List' }</div>
+        {showBack && <Link to="/" className="pt-button pt-minimal pt-icon-chevron-left" />}
+        <div className="pt-navbar-heading">
+          {title || 'To-Do List'}
+        </div>
       </div>
       <div className="pt-navbar-group pt-align-right">
-        { showAdd && <Link to="/new" className="pt-button pt-minimal pt-icon-add">New</Link> }
+        {showAdd && (
+          <Link to="/new" className="pt-button pt-minimal pt-icon-add">
+            new
+          </Link>
+        )}
       </div>
     </nav>
   )

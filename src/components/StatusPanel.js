@@ -4,8 +4,11 @@ import React from 'react'
 
 import FilterButton from '../containers/FilterButton'
 
-const createButton = (status, text) =>
-  <FilterButton status={status} size="small">{text}</FilterButton>
+const createButton = (status, text) => (
+  <FilterButton status={status} size="small">
+    {text}
+  </FilterButton>
+)
 
 export default function StatusPanel() {
   return (

@@ -48,20 +48,31 @@ function Item({
       text = `due in ${-diff} days`
     }
 
-    return <span className="text-duedate"> - <span className={decoratorClass}>{text}</span></span>
+    return (
+      <span className="text-duedate">
+        {' '}
+        -
+        {' '}
+        <span className={decoratorClass}>
+          {text}
+        </span>
+      </span>
+)
   }
 
   return (
     <li style={style} className={classNames('item-todo', completed && 'is-complete')}>
-      <label className="pt-control pt-checkbox">
-        <input type="checkbox" onChange={() => onCheck(id)} defaultChecked={completed} />
+      <label htmlFor={`checkbox-item-${id}`} className="pt-control pt-checkbox">
+        <input id={`checkbox-item-${id}`} type="checkbox" onChange={() => onCheck(id)} defaultChecked={completed} />
         <span className="pt-control-indicator" />
       </label>
       <Link to={`/item/${id}`}>
-        <span className="text-title">{title}</span>
+        <span className="text-title">
+          {title}
+        </span>
         {!completed ? getDueDateInfo() : null}
       </Link>
-      <button className="pt-button pt-minimal pt-icon-cross" onClick={() => onDelete(id)} />
+      <button className="pt-button pt-minimal pt-icon-cross" onClick={() => onDelete(id)} type="button" />
     </li>
   )
 }

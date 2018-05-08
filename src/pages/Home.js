@@ -10,8 +10,12 @@ function HomePage() {
   return (
     <div className="display-flex">
       <NavBar showAdd />
-      <div className="flex-1"><List /></div>
-      <div><StatusPanel /></div>
+      <div className="flex-1">
+        <List />
+      </div>
+      <div>
+        <StatusPanel />
+      </div>
     </div>
   )
 }

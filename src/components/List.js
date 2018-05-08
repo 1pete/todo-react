@@ -20,8 +20,12 @@ function List({ items, flag }: Props) {
         <div className="pt-non-ideal-state-visual pt-non-ideal-state-icon">
           <span className="pt-icon pt-icon-inbox" />
         </div>
-        <h4 className="pt-non-ideal-state-title">List is empty</h4>
-        <div className="pt-non-ideal-state-description">Try create a new to-do.</div>
+        <h4 className="pt-non-ideal-state-title">
+          List is empty
+        </h4>
+        <div className="pt-non-ideal-state-description">
+          Try create a new to-do.
+        </div>
       </div>
       <ul className="list-container">
         {filteredItems.map(data => <Item key={data.id} {...data} />)}

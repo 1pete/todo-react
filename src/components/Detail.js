@@ -40,25 +40,34 @@ class Detail extends Component<Props, State> {
   }
 
   componentWillMount() {
-    if (this.props.redirect) {
-      this.props.history.push('/')
+    const {
+      title,
+      dueDate,
+      description,
+      history,
+      redirect,
+    } = this.props
+
+    if (redirect) {
+      history.push('/')
       return
     }
 
     this.setState({
-      title: this.props.title,
-      dueDate: this.props.dueDate,
-      description: this.props.description,
+      title: title,
+      dueDate: dueDate,
+      description: description,
     })
   }
 
   onSave = () => {
-    let { title, dueDate, description } = this.state
+    const { onSave, history } = this.props
+    const { title, dueDate, description } = this.state
 
     if (!title || !title.trim()) return
 
-    this.props.onSave({ title: title.trim(), dueDate, description: (description || '').trim() })
-    this.props.history.push('/')
+    onSave({ title: title.trim(), dueDate, description: (description || '').trim() })
+    history.push('/')
   }
 
   handleTitleChange = (event) => {
@@ -81,9 +90,10 @@ class Detail extends Component<Props, State> {
 
     return (
       <div className="component-description">
-        <label className="pt-label">
+        <label htmlFor="input-title" className="pt-label">
           Title
           <input
+            id="input-title"
             className="pt-input pt-large"
             type="text"
             style={{ width: '100%' }}
@@ -92,11 +102,12 @@ class Detail extends Component<Props, State> {
             onChange={this.handleTitleChange}
           />
         </label>
-        <label className="pt-label">
+        <label htmlFor="input-duedate" className="pt-label">
           Due Date
           <div className="pt-input-group">
             <span className="pt-icon pt-icon-calendar" />
             <input
+              id="input-duedate"
               className="pt-input"
               type="date"
               defaultValue={dueDateString}
@@ -104,9 +115,10 @@ class Detail extends Component<Props, State> {
             />
           </div>
         </label>
-        <label className="pt-label">
+        <label htmlFor="input-description" className="pt-label">
           Description
           <textarea
+            id="input-description"
             className="pt-input"
             rows={10}
             style={{ width: '100%' }}
@@ -115,7 +127,9 @@ class Detail extends Component<Props, State> {
             onChange={this.handleDescriptionChange}
           />
         </label>
-        <button className="pt-button pt-intent-primary" onClick={this.onSave}>{ saveLabel || 'Save' }</button>
+        <button className="pt-button pt-intent-primary" onClick={this.onSave} type="button">
+          {saveLabel || 'Save'}
+        </button>
       </div>
     )
   }
