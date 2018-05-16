@@ -1,6 +1,7 @@
 // @flow
 
 import { connect } from 'react-redux'
+
 import { toggleTodo } from '../actions'
 import List from '../components/List'
 
@@ -20,11 +21,4 @@ const mapStateToProps = state => ({
   flag: getFlag(state.status),
 })
 
-const mapDispatchToProps = ({
-  onTodoClick: toggleTodo,
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(List)
+export default connect(mapStateToProps)(List)
