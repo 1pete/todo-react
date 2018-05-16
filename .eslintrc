@@ -1,5 +1,8 @@
 parser: babel-eslint
 extends: 1pete-react
+settings:
+  react:
+    version: "16.3"
 globals:
   __DEV__: true
 env:

@@ -39,7 +39,7 @@ class Detail extends Component<Props, State> {
     description: '',
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const {
       title,
       dueDate,
