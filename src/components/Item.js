@@ -57,7 +57,7 @@ function Item({
           {text}
         </span>
       </span>
-)
+    )
   }
 
   return (

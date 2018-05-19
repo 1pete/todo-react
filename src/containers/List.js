@@ -2,7 +2,6 @@
 
 import { connect } from 'react-redux'
 
-import { toggleTodo } from '../actions'
 import List from '../components/List'
 
 const getFlag = (status) => {

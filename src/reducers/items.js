@@ -36,8 +36,7 @@ export default (state: Array<Todo> = [], { type, ...data }: Action): Array<Todo>
   }
 
   if (type === TOGGLE_TODO) {
-    return state.map(item =>
-      (item.id === data.id ? { ...item, completed: !item.completed } : item))
+    return state.map(item => (item.id === data.id ? { ...item, completed: !item.completed } : item))
   }
 
   return state

@@ -27,8 +27,7 @@ export const editTodo = (props: Object) => ({
   ...props,
 })
 
-const doAction = (action: string) =>
-  (id: string) => ({ type: action, id })
+const doAction = (action: string) => (id: string) => ({ type: action, id })
 
 export const deleteTodo = doAction(DELETE_TODO)
 export const selectTodo = doAction(SELECT_TODO)

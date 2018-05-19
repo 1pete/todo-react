@@ -54,9 +54,9 @@ class Detail extends Component<Props, State> {
     }
 
     this.setState({
-      title: title,
-      dueDate: dueDate,
-      description: description,
+      title,
+      dueDate,
+      description,
     })
   }
 
