@@ -1,12 +1,22 @@
 parser: babel-eslint
-extends: 1pete-react
+
+plugins:
+  - flowtype
+
+extends:
+  - 1pete-react
+  - plugin:flowtype/recommended
+
 settings:
   react:
     version: "16.3"
+
 globals:
   __DEV__: true
+
 env:
   browser: true
+
 overrides:
   - files: ['*.spec.js']
     env:
