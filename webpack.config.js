@@ -3,7 +3,6 @@ const webpack = require('webpack')
 
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const CleanPlugin = require('clean-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const { FaviconsWebpackPlugin } = require('favicons-manifest-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
@@ -27,17 +26,6 @@ module.exports = (env) => {
     module: {
       rules: [
         { test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' },
-        {
-          test: /\.css$/,
-          use:
-            isDev
-              ? ['style-loader', 'css-loader']
-              : ExtractTextPlugin.extract({ use: ['css-loader'] }),
-        },
-        {
-          test: /\.(eot|svg|ttf|woff|woff2)$/,
-          use: [{ loader: 'file-loader', options: { name: 'public/fonts/[name].[ext]' } }],
-        },
       ],
     },
     resolve: {
@@ -78,7 +66,6 @@ module.exports = (env) => {
   } else {
     config.plugins.push(...[
       new CleanPlugin(['dist'], { root }),
-      new ExtractTextPlugin('styles.css'),
       new FaviconsWebpackPlugin({
         logo: path.resolve('src/logo.png'),
         inject: true,
