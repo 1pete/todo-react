@@ -38,7 +38,7 @@
     "clean-webpack-plugin": "~0.1.0",
     "eslint": "~4.19.0",
     "eslint-config-1pete-react": "~0.1.0",
-    "eslint-plugin-flowtype": "~2.46.0",
+    "eslint-plugin-flowtype": "~2.47.0",
     "favicons-manifest-plugin": "1pete/favicons-manifest-plugin",
     "flow-bin": "~0.72.0",
     "gh-pages": "~1.1.0",
