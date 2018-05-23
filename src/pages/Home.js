@@ -3,7 +3,7 @@
 import React from 'react'
 
 import NavBar from '../components/NavBar'
-import StatusPanel from '../components/StatusPanel'
+// import StatusPanel from '../components/StatusPanel'
 import List from '../containers/List'
 
 function HomePage() {
@@ -13,9 +13,9 @@ function HomePage() {
       <div className="flex-1">
         <List />
       </div>
-      <div>
+      {/* <div>
         <StatusPanel />
-      </div>
+      </div> */}
     </div>
   )
 }

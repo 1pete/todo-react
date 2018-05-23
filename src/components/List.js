@@ -2,34 +2,54 @@
 
 import React from 'react'
 
+import { withStyles } from '@material-ui/core/styles'
+import MuiList from '@material-ui/core/List'
+import Typography from '@material-ui/core/Typography'
+import InboxIcon from '@material-ui/icons/Inbox'
+
 import Item from '../containers/InteractiveItem'
 
-import './List.css'
+const styles = theme => ({
+  root: {
+    width: '100%',
+    paddingRight: 10,
+    backgroundColor: theme.palette.background.paper,
+  },
+
+  emptyState: {
+    position: 'absolute',
+    top: '30%',
+    width: '100%',
+    textAlign: 'center',
+    transition: 'opacity 0.4s',
+  },
+})
 
 type Props = {
   flag?: boolean,
   items: Array<any>,
+  classes: Object,
 }
 
-function List({ items, flag }: Props) {
+function List({ items, flag, classes }: Props) {
   const filteredItems = flag == null ? items : items.filter(item => !!item.completed === flag)
 
   return (
-    <div>
-      <div className="pt-non-ideal-state" style={{ opacity: +!filteredItems.length }}>
+    <div className={classes.root}>
+      <div className={classes.emptyState} style={{ opacity: +!filteredItems.length }}>
         <div className="pt-non-ideal-state-visual pt-non-ideal-state-icon">
-          <span className="pt-icon pt-icon-inbox" />
+          <InboxIcon style={{ fontSize: 60 }} />
         </div>
-        <h4 className="pt-non-ideal-state-title">
+        <Typography variant="title">
           List is empty
-        </h4>
-        <div className="pt-non-ideal-state-description">
+        </Typography>
+        <Typography variant="subheading">
           Try create a new to-do.
-        </div>
+        </Typography>
       </div>
-      <ul className="list-container">
+      <MuiList>
         {filteredItems.map(data => <Item key={data.id} {...data} />)}
-      </ul>
+      </MuiList>
     </div>
   )
 }
@@ -38,4 +58,4 @@ List.defaultProps = {
   flag: undefined,
 }
 
-export default List
+export default withStyles(styles)(List)

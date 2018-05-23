@@ -17,11 +17,7 @@ module.exports = (env) => {
   const config = {
     context: root,
     entry: {
-      app: [
-        '@blueprintjs/core/dist/blueprint.css',
-        './src/index.css',
-        './src/index.js',
-      ],
+      app: './src/index',
     },
     output: {
       path: dist,

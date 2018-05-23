@@ -1,12 +1,41 @@
 // @flow
 
 import React from 'react'
-import { Link } from 'react-router-dom'
-import classNames from 'classnames'
+import { withRouter } from 'react-router-dom'
+import classnames from 'classnames'
 import moment from 'moment'
 
-import './Item.css'
+import { withStyles } from '@material-ui/core/styles'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction'
+import ListItemText from '@material-ui/core/ListItemText'
+import Checkbox from '@material-ui/core/Checkbox'
+import IconButton from '@material-ui/core/IconButton'
+import DeleteIcon from '@material-ui/icons/Delete'
 
+import type { RouterHistory } from 'react-router-dom'
+
+const styles = theme => ({
+  isComplete: {
+    opacity: 0.6,
+  },
+  isCompleteText: {
+    textDecoration: 'line-through',
+  },
+
+  textDueDate: {
+    ...theme.typography.subheading,
+    marginRight: 5,
+  },
+
+  textMute: {
+    color: '#5c7080',
+  },
+
+  textError: {
+    color: '#F55656',
+  },
+})
 
 type Props = {
   id: string,
@@ -16,6 +45,8 @@ type Props = {
   onCheck: Function,
   onDelete: Function,
   style?: Object,
+  classes: Object,
+  history: RouterHistory,
 }
 
 function Item({
@@ -25,7 +56,8 @@ function Item({
   completed,
   onCheck,
   onDelete,
-  style,
+  classes,
+  history,
 }: Props) {
   const today = moment.utc().startOf('day')
   const getDueDateInfo = () => {
@@ -35,11 +67,11 @@ function Item({
     if (diff < -5) return null
 
     let text
-    let decoratorClass = 'text-muted'
+    let decoratorClass = classes.textMute
 
     if (diff > 0) {
       text = 'overdue'
-      decoratorClass = 'text-error'
+      decoratorClass = classes.textError
     } else if (diff === 0) {
       text = 'due today'
     } else if (diff === -1) {
@@ -49,7 +81,7 @@ function Item({
     }
 
     return (
-      <span className="text-duedate">
+      <span className={classes.textDueDate}>
         {' '}
         -
         {' '}
@@ -61,19 +93,27 @@ function Item({
   }
 
   return (
-    <li style={style} className={classNames('item-todo', completed && 'is-complete')}>
-      <label htmlFor={`checkbox-item-${id}`} className="pt-control pt-checkbox">
-        <input id={`checkbox-item-${id}`} type="checkbox" onChange={() => onCheck(id)} defaultChecked={completed} />
-        <span className="pt-control-indicator" />
-      </label>
-      <Link to={`/item/${id}`}>
-        <span className="text-title">
-          {title}
-        </span>
+    <ListItem
+      className={classnames(classes.listItem, completed && classes.isComplete)}
+    >
+      <Checkbox
+        checked={completed}
+        tabIndex={-1}
+        disableRipple
+        onChange={() => onCheck(id) && false}
+      />
+      <ListItemText
+        primary={title}
+        className={classnames(completed && classes.isCompleteText)}
+        onClick={() => { history.push(`/item/${id}`) }}
+      />
+      <ListItemSecondaryAction>
         {!completed ? getDueDateInfo() : null}
-      </Link>
-      <button className="pt-button pt-minimal pt-icon-cross" onClick={() => onDelete(id)} type="button" />
-    </li>
+        <IconButton aria-label="Delete" onClick={() => onDelete(id)}>
+          <DeleteIcon />
+        </IconButton>
+      </ListItemSecondaryAction>
+    </ListItem>
   )
 }
 
@@ -83,4 +123,4 @@ Item.defaultProps = {
   style: undefined,
 }
 
-export default Item
+export default withRouter(withStyles(styles)(Item))

@@ -4,7 +4,27 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import moment from 'moment'
 
+import { withStyles } from '@material-ui/core/styles'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+
 import type { RouterHistory } from 'react-router-dom'
+
+const styles = {
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: 20,
+    marginRight: 20,
+    width: '100%',
+  },
+  button: {
+    marginLeft: 20,
+    marginTop: 5,
+  },
+}
 
 type Props = {
   title?: string,
@@ -14,6 +34,7 @@ type Props = {
   saveLabel?: string,
   redirect?: boolean,
   history: RouterHistory,
+  classes: Object,
 }
 
 type State = {
@@ -22,20 +43,18 @@ type State = {
   description: string,
 }
 
-const defaultProps = {
-  title: '',
-  dueDate: '',
-  description: '',
-  saveLabel: '',
-  redirect: false,
-}
-
 class Detail extends Component<Props, State> {
-  static defaultProps = defaultProps
+  static defaultProps = {
+    title: '',
+    dueDate: '',
+    description: '',
+    saveLabel: '',
+    redirect: false,
+  }
 
   state = {
     title: '',
-    dueDate: null,
+    dueDate: moment().format('YYYY-MM-DD'),
     description: '',
   }
 
@@ -84,55 +103,54 @@ class Detail extends Component<Props, State> {
   }
 
   render() {
-    let { saveLabel } = this.props
+    let { saveLabel, classes } = this.props
     let { title, dueDate, description } = this.state
-    const dueDateString = moment(dueDate).format('YYYY-MM-DD')
+    const dueDateString = dueDate ? moment(dueDate).format('YYYY-MM-DD') : null
 
     return (
-      <div className="component-description">
-        <label htmlFor="input-title" className="pt-label">
-          Title
-          <input
-            id="input-title"
-            className="pt-input pt-large"
-            type="text"
-            style={{ width: '100%' }}
-            defaultValue={title}
-            placeholder="Insert task name..."
-            onChange={this.handleTitleChange}
-          />
-        </label>
-        <label htmlFor="input-duedate" className="pt-label">
-          Due Date
-          <div className="pt-input-group">
-            <span className="pt-icon pt-icon-calendar" />
-            <input
-              id="input-duedate"
-              className="pt-input"
-              type="date"
-              defaultValue={dueDateString}
-              onChange={this.handleDateChange}
-            />
-          </div>
-        </label>
-        <label htmlFor="input-description" className="pt-label">
-          Description
-          <textarea
-            id="input-description"
-            className="pt-input"
-            rows={10}
-            style={{ width: '100%' }}
-            defaultValue={description}
-            placeholder="Insert description..."
-            onChange={this.handleDescriptionChange}
-          />
-        </label>
-        <button className="pt-button pt-intent-primary" onClick={this.onSave} type="button">
+      <form className={classes.container} noValidate autoComplete="off">
+        <TextField
+          id="title"
+          label="Title"
+          className={classes.textField}
+          placeholder="Insert task name..."
+          value={title}
+          onChange={this.handleTitleChange}
+          margin="normal"
+        />
+        <TextField
+          id="date"
+          label="Due Date"
+          type="date"
+          defaultValue={dueDateString}
+          className={classes.textField}
+          InputLabelProps={{
+            shrink: true,
+          }}
+          onChange={this.handleDateChange}
+        />
+        <TextField
+          id="description"
+          label="Description"
+          className={classes.textField}
+          placeholder="Insert description..."
+          value={description}
+          onChange={this.handleDescriptionChange}
+          margin="normal"
+          multiline
+          rows={5}
+        />
+        <Button
+          color="primary"
+          variant="raised"
+          className={classes.button}
+          onClick={this.onSave}
+        >
           {saveLabel || 'Save'}
-        </button>
-      </div>
+        </Button>
+      </form>
     )
   }
 }
 
-export default withRouter(Detail)
+export default withRouter(withStyles(styles)(Detail))

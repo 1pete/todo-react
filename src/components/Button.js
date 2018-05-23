@@ -1,8 +1,8 @@
 // @flow
 
 import React from 'react'
-import classNames from 'classnames'
 
+import MuiButton from '@material-ui/core/Button'
 
 type Props = {
   active: boolean,
@@ -12,13 +12,13 @@ type Props = {
 
 function Button({ active, children, onClick }: Props) {
   return (
-    <button
-      className={classNames('pt-button', 'pt-minimal', active && 'pt-active')}
+    <MuiButton
+      variant="raised"
+      color={active ? 'primary' : null}
       onClick={onClick}
-      type="button"
     >
       {children}
-    </button>
+    </MuiButton>
   )
 }
 
