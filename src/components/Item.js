@@ -44,7 +44,6 @@ type Props = {
   completed?: boolean,
   onCheck: Function,
   onDelete: Function,
-  style?: Object,
   classes: Object,
   history: RouterHistory,
 }
@@ -120,7 +119,6 @@ function Item({
 Item.defaultProps = {
   dueDate: '',
   completed: false,
-  style: undefined,
 }
 
 export default withRouter(withStyles(styles)(Item))
