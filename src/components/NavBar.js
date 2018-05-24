@@ -71,7 +71,7 @@ class NavBar extends Component<Props> {
           </Typography>
           {showAdd && (
             <Button color="inherit" onClick={this.goToPageNew}>
-              new
+              new item
             </Button>
           )}
         </Toolbar>
