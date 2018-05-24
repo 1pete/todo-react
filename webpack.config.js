@@ -72,8 +72,8 @@ module.exports = (env) => {
         prefix: 'icons/',
         options: {
           appName: 'To-Do List',
-          background: '#0097A7',
-          theme_color: '#0097A7',
+          background: '#1976D2',
+          theme_color: '#1976D2',
           start_url: '/todo-react/?homescreen=1',
         },
         html: {

@@ -5,8 +5,18 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+
 import App from './components/App'
 import configureStore from './configureStore'
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#2196f3',
+    },
+  },
+})
 
 OfflineRuntime.install({
   onUpdateReady: () => {
@@ -22,7 +32,9 @@ const { store, persistor } = configureStore()
 let renderApp = Component => render(
   <Provider store={store}>
     <PersistGate persistor={persistor}>
-      <Component />
+      <MuiThemeProvider theme={theme}>
+        <Component />
+      </MuiThemeProvider>
     </PersistGate>
   </Provider>,
   document.getElementById('root'),
