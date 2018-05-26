@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-import MuiButton from '@material-ui/core/Button'
+import { Button as MuiButton } from '@material-ui/core'
 
 type Props = {
   active: boolean,
@@ -14,7 +14,7 @@ function Button({ active, children, onClick }: Props) {
   return (
     <MuiButton
       variant="raised"
-      color={active ? 'primary' : null}
+      color={active ? 'primary' : 'default'}
       onClick={onClick}
     >
       {children}

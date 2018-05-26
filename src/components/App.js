@@ -3,7 +3,7 @@
 import React from 'react'
 import { Route, HashRouter as Router } from 'react-router-dom'
 
-import CssBaseline from '@material-ui/core/CssBaseline'
+import { CssBaseline } from '@material-ui/core'
 
 import Home from '../pages/Home'
 import New from '../pages/New'

@@ -5,8 +5,10 @@ import { withRouter } from 'react-router-dom'
 import moment from 'moment'
 
 import { withStyles } from '@material-ui/core/styles'
-import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
+import {
+  Button,
+  TextField,
+} from '@material-ui/core'
 
 import type { RouterHistory } from 'react-router-dom'
 
@@ -39,7 +41,7 @@ type Props = {
 
 type State = {
   title: string,
-  dueDate: ?string,
+  dueDate: ?moment$Moment,
   description: string,
 }
 
@@ -54,7 +56,7 @@ class Detail extends Component<Props, State> {
 
   state = {
     title: '',
-    dueDate: moment().format('YYYY-MM-DD'),
+    dueDate: moment(),
     description: '',
   }
 
@@ -105,7 +107,7 @@ class Detail extends Component<Props, State> {
   render() {
     let { saveLabel, classes } = this.props
     let { title, dueDate, description } = this.state
-    const dueDateString = dueDate ? moment(dueDate).format('YYYY-MM-DD') : null
+    const dueDateString = dueDate ? moment(dueDate).format('YYYY-MM-DD') : ''
 
     return (
       <form className={classes.container} noValidate autoComplete="off">

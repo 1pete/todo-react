@@ -3,9 +3,11 @@
 import React from 'react'
 
 import { withStyles } from '@material-ui/core/styles'
-import MuiList from '@material-ui/core/List'
-import Typography from '@material-ui/core/Typography'
-import InboxIcon from '@material-ui/icons/Inbox'
+import {
+  List as MuiList,
+  Typography,
+} from '@material-ui/core'
+import { Inbox as InboxIcon } from '@material-ui/icons'
 
 import Item from '../containers/InteractiveItem'
 
