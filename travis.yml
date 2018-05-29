@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - lts/*
+
+cache: yarn
+
+script:
+  - yarn lint
+  # - yarn flow
+  - yarn test
+  - yarn build
+
+branches:
+  only:
+  - master
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
+
+  target-branch: gh-pages
+  local-dir: dist
+  allow-empty-commit: true

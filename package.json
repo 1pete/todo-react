@@ -3,7 +3,6 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --env prod --mode production",
-    "deploy": "gh-pages -d dist",
     "lint": "eslint src test",
     "flow": "flow check",
     "test": "NODE_ENV=test mocha --require @babel/register --require @babel/polyfill test/**/*.spec.js",
@@ -41,7 +40,6 @@
     "eslint-plugin-flowtype": "~2.47.0",
     "favicons-manifest-plugin": "1pete/favicons-manifest-plugin",
     "flow-bin": "~0.73.0",
-    "gh-pages": "~1.1.0",
     "html-webpack-plugin": "~3.2.0",
     "mocha": "~5.2.0",
     "webpack": "~4.10.0",

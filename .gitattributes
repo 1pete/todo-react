@@ -8,6 +8,5 @@
 *.less  text eol=lf
 *.lock  text eol=lf
 *.opts  text eol=lf
-*.scss  text eol=lf
 *.md    text eol=lf
-*.sh    text eol=lf
+*.yml   text eol=lf
