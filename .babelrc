@@ -10,10 +10,10 @@
       "exclude": ["web.timers", "web.immediate", "web.dom.iterable"]
     }],
     "@babel/preset-flow",
-    "@babel/preset-react"
+    ["@babel/preset-react", { "useBuiltIns": true }]
   ],
   "plugins": [
-    "@babel/plugin-proposal-class-properties"
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
   ],
   "env": {
     "test": {

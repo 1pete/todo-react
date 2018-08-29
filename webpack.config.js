@@ -31,7 +31,6 @@ module.exports = (env) => {
     resolve: {
       alias: {
         '@material-ui/core': path.resolve(__dirname, 'node_modules/@material-ui/core/es'),
-        '@material-ui/icons': path.resolve(__dirname, 'node_modules/@material-ui/icons/es'),
         'history/createMemoryHistory': path.resolve(__dirname, 'node_modules/history/es/createMemoryHistory'),
         'history/createHashHistory': path.resolve(__dirname, 'node_modules/history/es/createHashHistory'),
         'history/createBrowserHistory': path.resolve(__dirname, 'node_modules/history/es/createBrowserHistory'),
