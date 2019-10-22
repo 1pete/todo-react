@@ -32,11 +32,17 @@ export default (state: Array<Todo> = [], { type, ...data }: Action): Array<Todo>
   }
 
   if (type === DELETE_TODO) {
-    return state.filter(item => item.id !== data.id)
+    return state.filter((item) => item.id !== data.id)
   }
 
   if (type === TOGGLE_TODO) {
-    return state.map(item => (item.id === data.id ? { ...item, completed: !item.completed } : item))
+    return state.map((item) => {
+      if (item.id === data.id) {
+        return { ...item, completed: !item.completed }
+      }
+
+      return item
+    })
   }
 
   return state

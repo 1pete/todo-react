@@ -37,12 +37,6 @@ type Props = {
 }
 
 class NavBar extends Component<Props> {
-  static defaultProps = {
-    showAdd: false,
-    showBack: false,
-    title: '',
-  }
-
   goBack = () => {
     const { history } = this.props
     history.goBack()
@@ -80,6 +74,12 @@ class NavBar extends Component<Props> {
       </AppBar>
     )
   }
+}
+
+NavBar.defaultProps = {
+  showAdd: false,
+  showBack: false,
+  title: '',
 }
 
 export default withRouter(withStyles(styles)(NavBar))

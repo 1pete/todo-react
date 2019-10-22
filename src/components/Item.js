@@ -17,7 +17,7 @@ import { Delete as DeleteIcon } from '@material-ui/icons'
 
 import type { RouterHistory } from 'react-router-dom'
 
-const styles = theme => ({
+const styles = (theme) => ({
   isComplete: {
     opacity: 0.6,
   },

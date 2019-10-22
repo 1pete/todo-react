@@ -46,14 +46,6 @@ type State = {
 }
 
 class Detail extends Component<Props, State> {
-  static defaultProps = {
-    title: '',
-    dueDate: '',
-    description: '',
-    saveLabel: '',
-    redirect: false,
-  }
-
   state = {
     title: '',
     dueDate: moment(),
@@ -153,6 +145,14 @@ class Detail extends Component<Props, State> {
       </form>
     )
   }
+}
+
+Detail.defaultProps = {
+  title: '',
+  dueDate: '',
+  description: '',
+  saveLabel: '',
+  redirect: false,
 }
 
 export default withRouter(withStyles(styles)(Detail))

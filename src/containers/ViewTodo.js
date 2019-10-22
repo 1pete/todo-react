@@ -9,7 +9,7 @@ import Detail from '../components/Detail'
 import { editTodo } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
-  let item = state.items.find(i => i.id === ownProps.itemId)
+  let item = state.items.find((i) => i.id === ownProps.itemId)
 
   if (!item) return { redirect: true }
 

@@ -11,7 +11,7 @@ import { Inbox as InboxIcon } from '@material-ui/icons'
 
 import Item from '../containers/InteractiveItem'
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     width: '100%',
     paddingRight: 10,
@@ -34,7 +34,7 @@ type Props = {
 }
 
 function List({ items, flag, classes }: Props) {
-  const filteredItems = flag == null ? items : items.filter(item => !!item.completed === flag)
+  const filteredItems = flag == null ? items : items.filter((item) => !!item.completed === flag)
 
   return (
     <div className={classes.root}>
@@ -50,7 +50,7 @@ function List({ items, flag, classes }: Props) {
         </Typography>
       </div>
       <MuiList>
-        {filteredItems.map(data => <Item key={data.id} {...data} />)}
+        {filteredItems.map((data) => <Item key={data.id} {...data} />)}
       </MuiList>
     </div>
   )

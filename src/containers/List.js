@@ -15,7 +15,7 @@ const getFlag = (status) => {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   items: state.items,
   flag: getFlag(state.status),
 })
