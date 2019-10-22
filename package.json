@@ -38,7 +38,7 @@
     "eslint-config-1pete-react": "~2.0.0",
     "eslint-plugin-flowtype": "~4.3.0",
     "favicons-manifest-plugin": "1pete/favicons-manifest-plugin",
-    "flow-bin": "~0.109.0",
+    "flow-bin": "~0.110.0",
     "html-webpack-plugin": "~3.2.0",
     "mocha": "~6.2.0",
     "webpack": "~4.41.0",
