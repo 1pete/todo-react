@@ -2,7 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
-const CleanPlugin = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { FaviconsWebpackPlugin } = require('favicons-manifest-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
@@ -19,7 +19,7 @@ module.exports = (env) => {
       app: './src/index',
     },
     output: {
-      path: dist,
+      path: path.resolve('dist'),
       publicPath: '',
       filename: '[name].js',
     },
@@ -66,7 +66,7 @@ module.exports = (env) => {
     config.plugins.push(new webpack.HotModuleReplacementPlugin())
   } else {
     config.plugins.push(...[
-      new CleanPlugin(['dist'], { root }),
+      new CleanWebpackPlugin(),
       new FaviconsWebpackPlugin({
         logo: path.resolve('src/logo.png'),
         inject: true,

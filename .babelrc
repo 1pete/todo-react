@@ -3,6 +3,7 @@
     ["@babel/preset-env", {
       "modules": false,
       "useBuiltIns": "entry",
+      "corejs": "2",
       "loose": true,
       "targets": {
         "browsers": ["chrome >= 60", "safari >= 10"]
