@@ -136,7 +136,7 @@ class Detail extends Component<Props, State> {
         />
         <Button
           color="primary"
-          variant="raised"
+          variant="contained"
           className={classes.button}
           onClick={this.onSave}
         >

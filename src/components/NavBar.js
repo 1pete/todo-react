@@ -58,11 +58,16 @@ class NavBar extends Component<Props> {
       <AppBar position="static">
         <Toolbar>
           {showBack && (
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-              <ArrowIcon onClick={this.goBack} />
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Menu"
+              onClick={this.goBack}
+            >
+              <ArrowIcon />
             </IconButton>
           )}
-          <Typography variant="title" color="inherit" className={classes.flex}>
+          <Typography variant="h5" color="inherit" className={classes.flex}>
             {title || 'To-Do List'}
           </Typography>
           {showAdd && (

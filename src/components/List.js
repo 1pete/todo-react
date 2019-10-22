@@ -42,10 +42,10 @@ function List({ items, flag, classes }: Props) {
         <div className="pt-non-ideal-state-visual pt-non-ideal-state-icon">
           <InboxIcon style={{ fontSize: 60 }} />
         </div>
-        <Typography variant="title">
+        <Typography variant="h5">
           List is empty
         </Typography>
-        <Typography variant="subheading">
+        <Typography variant="subtitle1">
           Try create a new to-do.
         </Typography>
       </div>
