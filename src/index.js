@@ -1,4 +1,5 @@
-import '@babel/polyfill'
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
 import OfflineRuntime from 'offline-plugin/runtime'
 import React from 'react'
 import { render } from 'react-dom'
