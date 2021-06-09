@@ -1,6 +1,6 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import OfflineRuntime from 'offline-plugin/runtime'
+import OfflineRuntime from '@lcdp/offline-plugin/runtime'
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'

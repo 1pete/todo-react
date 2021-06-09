@@ -5,13 +5,13 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
-const OfflinePlugin = require('offline-plugin')
+const OfflinePlugin = require('@lcdp/offline-plugin')
 
 const root = path.resolve()
 const dist = path.resolve('dist')
 
 module.exports = (env) => {
-  const isDev = env !== 'prod'
+  const isDev = !env.prod
 
   const config = {
     context: root,
@@ -40,9 +40,7 @@ module.exports = (env) => {
     devtool: isDev ? 'eval-source-map' : 'source-map',
     recordsOutputPath: path.resolve('records.json'),
     devServer: {
-      noInfo: true,
       hot: true,
-      contentBase: dist,
       historyApiFallback: true,
       port: 3000,
     },
@@ -68,7 +66,7 @@ module.exports = (env) => {
     config.plugins.push(...[
       new CleanWebpackPlugin(),
       new FaviconsWebpackPlugin({
-        logo: path.resolve('src/logo.png'),
+        logo: './src/logo.png',
         inject: true,
         prefix: 'icons/',
         options: {
