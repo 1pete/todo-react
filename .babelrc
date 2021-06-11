@@ -2,13 +2,10 @@
   "presets": [
     ["@babel/preset-env", {
       "modules": false,
-      "useBuiltIns": "entry",
-      "corejs": "2",
       "loose": true,
       "targets": {
-        "browsers": ["chrome >= 60", "safari >= 10"]
-      },
-      "exclude": ["web.timers", "web.immediate", "web.dom.iterable"]
+        "browsers": ["chrome >= 80", "safari >= 11"]
+      }
     }],
     "@babel/preset-flow",
     ["@babel/preset-react", { "useBuiltIns": true }]
