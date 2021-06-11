@@ -1,4 +1,3 @@
-import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 import OfflineRuntime from '@lcdp/offline-plugin/runtime'
 import React from 'react'

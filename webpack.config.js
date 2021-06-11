@@ -8,7 +8,6 @@ const HtmlPlugin = require('html-webpack-plugin')
 const OfflinePlugin = require('@lcdp/offline-plugin')
 
 const root = path.resolve()
-const dist = path.resolve('dist')
 
 module.exports = (env) => {
   const isDev = !env.prod
@@ -52,7 +51,7 @@ module.exports = (env) => {
         },
         __DEV__: isDev,
       }),
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      new webpack.IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
     ],
     stats: {
       children: false,
