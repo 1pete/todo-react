@@ -1,0 +1,113 @@
+{
+  "HtmlWebpackCompiler": [
+    {
+      "chunks": {
+        "byName": {
+          "HtmlWebpackPlugin_0-0": 563
+        },
+        "bySource": {
+          "0 HtmlWebpackPlugin_0-0": 563
+        },
+        "usedIds": [
+          563
+        ]
+      },
+      "modules": {
+        "byIdentifier": {
+          "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html": 411,
+          "data:text/javascript,__webpack_public_path__ = __webpack_base_uri__ = htmlWebpackPluginPublicPath;": 295
+        },
+        "usedIds": [
+          295,
+          411
+        ]
+      }
+    }
+  ],
+  "__offline_serviceworker": [
+    {
+      "chunks": {
+        "byName": {
+          "__offline_serviceworker": 613
+        },
+        "bySource": {
+          "0 __offline_serviceworker": 613
+        },
+        "usedIds": [
+          613
+        ]
+      },
+      "modules": {
+        "byIdentifier": {
+          "./node_modules/@lcdp/offline-plugin/lib/misc/sw-loader.js?json=%7B%22data_var_name%22%3A%22__wpo%22%2C%22cacheMaps%22%3A%5B%5D%2C%22navigationPreload%22%3A%22false%22%7D!./node_modules/@lcdp/offline-plugin/tpls/empty-entry.js": 634,
+          "./node_modules/@lcdp/offline-plugin/tpls/empty-entry.js": 164
+        },
+        "usedIds": [
+          164,
+          634
+        ]
+      }
+    }
+  ],
+  "chunks": {
+    "byName": {
+      "app": 143
+    },
+    "bySource": {
+      "0 app": 143
+    },
+    "usedIds": [
+      143
+    ]
+  },
+  "modules": {
+    "byIdentifier": {
+      "./node_modules/@lcdp/offline-plugin/runtime.js": 731,
+      "./node_modules/@material-ui/core/node_modules/react-is/cjs/react-is.production.min.js": 341,
+      "./node_modules/@material-ui/core/node_modules/react-is/index.js": 122,
+      "./node_modules/babel-loader/lib/index.js!./src/index.js|67c03c24717838b810316814f64a8fa8": 679,
+      "./node_modules/classnames/index.js": 184,
+      "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js": 545,
+      "./node_modules/moment/moment.js": 381,
+      "./node_modules/object-assign/index.js": 418,
+      "./node_modules/prop-types/factoryWithThrowingShims.js": 703,
+      "./node_modules/prop-types/index.js": 697,
+      "./node_modules/prop-types/lib/ReactPropTypesSecret.js": 414,
+      "./node_modules/react-dom/cjs/react-dom.production.min.js": 448,
+      "./node_modules/react-dom/index.js": 935,
+      "./node_modules/react-is/cjs/react-is.production.min.js": 921,
+      "./node_modules/react-is/index.js": 864,
+      "./node_modules/react-router/node_modules/isarray/index.js": 585,
+      "./node_modules/react-router/node_modules/path-to-regexp/index.js": 658,
+      "./node_modules/react/cjs/react.production.min.js": 408,
+      "./node_modules/react/index.js": 294,
+      "./node_modules/regenerator-runtime/runtime.js": 666,
+      "./node_modules/scheduler/cjs/scheduler.production.min.js": 53,
+      "./node_modules/scheduler/index.js": 840
+    },
+    "usedIds": [
+      53,
+      122,
+      184,
+      294,
+      341,
+      381,
+      408,
+      414,
+      418,
+      448,
+      545,
+      585,
+      658,
+      666,
+      679,
+      697,
+      703,
+      731,
+      840,
+      864,
+      921,
+      935
+    ]
+  }
+}

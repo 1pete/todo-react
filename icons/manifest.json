@@ -1,14 +1,11 @@
 {
-  "name": "To-Do List",
-  "short_name": "To-Do List",
-  "description": null,
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
   "orientation": "any",
-  "start_url": "/todo-react/?homescreen=1",
-  "background_color": "#1976D2",
-  "theme_color": "#1976D2",
+  "start_url": "/?homescreen=1",
+  "background_color": "#fff",
+  "theme_color": "#fff",
   "icons": [
     {
       "src": "android-chrome-36x36.png",
