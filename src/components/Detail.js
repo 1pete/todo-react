@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import moment from 'moment'
+import { format } from 'date-fns'
 
 import { withStyles } from '@material-ui/core/styles'
 import {
@@ -41,36 +41,42 @@ type Props = {
 
 type State = {
   title: string,
-  dueDate: ?moment$Moment,
+  dueDate: Date,
   description: string,
 }
 
 class Detail extends Component<Props, State> {
   state = {
     title: '',
-    dueDate: moment(),
+    dueDate: new Date(),
     description: '',
   }
 
-  componentDidMount() {
+  constructor(props) {
+    super(props)
+
     const {
       title,
       dueDate,
       description,
+    } = props
+
+    this.state = {
+      title,
+      dueDate,
+      description,
+    }
+  }
+
+  componentDidMount() {
+    const {
       history,
       redirect,
     } = this.props
 
     if (redirect) {
       history.push('/')
-      return
     }
-
-    this.setState({
-      title,
-      dueDate,
-      description,
-    })
   }
 
   onSave = () => {
@@ -89,7 +95,7 @@ class Detail extends Component<Props, State> {
 
   handleDateChange = (event) => {
     let dateValue = event.target.value
-    this.setState({ dueDate: dateValue ? moment.utc(dateValue) : null })
+    this.setState({ dueDate: dateValue ? new Date(dateValue) : null })
   }
 
   handleDescriptionChange = (event) => {
@@ -99,7 +105,7 @@ class Detail extends Component<Props, State> {
   render() {
     let { saveLabel, classes } = this.props
     let { title, dueDate, description } = this.state
-    const dueDateString = dueDate ? moment(dueDate).format('YYYY-MM-DD') : ''
+    const dueDateString = dueDate ? format(new Date(dueDate), 'yyyy-MM-dd') : ''
 
     return (
       <form className={classes.container} noValidate autoComplete="off">
