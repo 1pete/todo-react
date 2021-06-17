@@ -1,7 +1,7 @@
 // @flow
 
 import { connect } from 'react-redux'
-import moment from 'moment'
+import { startOfToday } from 'date-fns'
 
 import type { Dispatch } from 'redux'
 
@@ -10,7 +10,7 @@ import Detail from '../components/Detail'
 import { addTodo } from '../actions'
 
 const mapStateToProps = () => ({
-  dueDate: moment.utc().startOf('day'),
+  dueDate: startOfToday(),
   saveLabel: 'Add',
 })
 

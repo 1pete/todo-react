@@ -3,7 +3,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import classnames from 'classnames'
-import moment from 'moment'
+import { startOfToday, differenceInDays } from 'date-fns'
 
 import { withStyles } from '@material-ui/core/styles'
 import {
@@ -60,11 +60,11 @@ function Item({
   classes,
   history,
 }: Props) {
-  const today = moment.utc().startOf('day')
+  const today = startOfToday()
   const getDueDateInfo = () => {
     if (!dueDate) return null
 
-    const diff = today.diff(dueDate, 'day')
+    const diff = differenceInDays(today, new Date(dueDate))
     if (diff < -5) return null
 
     let text
