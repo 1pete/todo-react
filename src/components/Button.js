@@ -10,7 +10,7 @@ type Props = {
   onClick: Function,
 }
 
-function Button({ active, children, onClick }: Props) {
+const Button = function Button({ active, children, onClick }: Props) {
   return (
     <MuiButton
       variant="raised"

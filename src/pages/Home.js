@@ -6,7 +6,7 @@ import NavBar from '../components/NavBar'
 // import StatusPanel from '../components/StatusPanel'
 import List from '../containers/List'
 
-function HomePage() {
+const HomePage = function HomePage() {
   return (
     <div className="display-flex">
       <NavBar showAdd />

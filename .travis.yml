@@ -6,7 +6,6 @@ cache: yarn
 
 script:
   - yarn lint
-  # - yarn flow // TODO: re-enable
   - yarn test
   - yarn build
 

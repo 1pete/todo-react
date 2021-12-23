@@ -33,7 +33,7 @@ type Props = {
   classes: Object,
 }
 
-function List({ items, flag, classes }: Props) {
+const List = function List({ items, flag, classes }: Props) {
   const filteredItems = flag == null ? items : items.filter((item) => !!item.completed === flag)
 
   return (

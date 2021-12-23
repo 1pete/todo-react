@@ -12,7 +12,7 @@ type Props = {
   match: Match,
 }
 
-function ViewPage({ match: { params } }: Props) {
+const ViewPage = function ViewPage({ match: { params } }: Props) {
   return (
     <div>
       <NavBar showBack />

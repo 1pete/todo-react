@@ -50,7 +50,7 @@ type Props = {
   history: RouterHistory,
 }
 
-function Item({
+const Item = function Item({
   id,
   title,
   dueDate,

@@ -1,3 +1,5 @@
+/* eslint-disable import/no-import-module-exports */
+
 import { createStore, compose } from 'redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/es/storage'

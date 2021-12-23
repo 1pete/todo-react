@@ -1,3 +1,5 @@
+/* eslint-disable import/no-import-module-exports */
+
 import 'regenerator-runtime/runtime'
 import OfflineRuntime from '@lcdp/offline-plugin/runtime'
 import React from 'react'
@@ -5,12 +7,12 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { MuiThemeProvider, createTheme } from '@material-ui/core/styles'
 
 import App from './components/App'
 import configureStore from './configureStore'
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: '#2196f3',

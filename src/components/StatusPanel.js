@@ -10,7 +10,7 @@ const createButton = (status, text) => (
   </FilterButton>
 )
 
-export default function StatusPanel() {
+const StatusPanel = function StatusPanel() {
   return (
     <nav className="pt-navbar footer">
       <div className="pt-navbar-group pt-minimal">
@@ -21,3 +21,5 @@ export default function StatusPanel() {
     </nav>
   )
 }
+
+export default StatusPanel

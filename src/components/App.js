@@ -9,7 +9,7 @@ import Home from '../pages/Home'
 import New from '../pages/New'
 import View from '../pages/View'
 
-function App() {
+const App = function App() {
   return (
     <Router>
       <div>

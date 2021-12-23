@@ -5,7 +5,7 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 import NewTodo from '../containers/NewTodo'
 
-function NewPage() {
+const NewPage = function NewPage() {
   return (
     <div>
       <NavBar showBack />
