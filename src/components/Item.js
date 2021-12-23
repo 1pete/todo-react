@@ -84,11 +84,7 @@ const Item = function Item({
     return (
       <span className={classes.textDueDate}>
         {' '}
-        -
-        {' '}
-        <span className={decoratorClass}>
-          {text}
-        </span>
+        - <span className={decoratorClass}>{text}</span>
       </span>
     )
   }
@@ -106,7 +102,9 @@ const Item = function Item({
       <ListItemText
         primary={title}
         className={classnames(completed && classes.isCompleteText)}
-        onClick={() => { history.push(`/item/${id}`) }}
+        onClick={() => {
+          history.push(`/item/${id}`)
+        }}
       />
       <ListItemSecondaryAction>
         {!completed ? getDueDateInfo() : null}

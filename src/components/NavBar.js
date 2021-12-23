@@ -48,12 +48,7 @@ class NavBar extends Component<Props> {
   }
 
   render() {
-    const {
-      showAdd,
-      showBack,
-      title,
-      classes,
-    } = this.props
+    const { showAdd, showBack, title, classes } = this.props
     return (
       <AppBar position="static">
         <Toolbar>

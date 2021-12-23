@@ -22,12 +22,14 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps) => ({
   onSave: ({ title, dueDate, description }) => {
-    dispatch(editTodo({
-      id: ownProps.itemId,
-      title,
-      dueDate,
-      description,
-    }))
+    dispatch(
+      editTodo({
+        id: ownProps.itemId,
+        title,
+        dueDate,
+        description,
+      }),
+    )
   },
 })
 

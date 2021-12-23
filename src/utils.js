@@ -8,7 +8,7 @@ export function uuid(): string {
       separator = '-'
     }
 
-    let random = Math.random() * 16 | 0
+    let random = (Math.random() * 16) | 0
     if (i === 12) {
       random = 4
     } else if (i === 16) {

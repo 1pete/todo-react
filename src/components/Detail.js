@@ -5,10 +5,7 @@ import { withRouter } from 'react-router-dom'
 import { format } from 'date-fns'
 
 import { withStyles } from '@material-ui/core/styles'
-import {
-  Button,
-  TextField,
-} from '@material-ui/core'
+import { Button, TextField } from '@material-ui/core'
 
 import type { RouterHistory } from 'react-router-dom'
 
@@ -55,11 +52,7 @@ class Detail extends Component<Props, State> {
   constructor(props) {
     super(props)
 
-    const {
-      title,
-      dueDate,
-      description,
-    } = props
+    const { title, dueDate, description } = props
 
     this.state = {
       title,
@@ -69,10 +62,7 @@ class Detail extends Component<Props, State> {
   }
 
   componentDidMount() {
-    const {
-      history,
-      redirect,
-    } = this.props
+    const { history, redirect } = this.props
 
     if (redirect) {
       history.push('/')
@@ -85,7 +75,11 @@ class Detail extends Component<Props, State> {
 
     if (!title || !title.trim()) return
 
-    onSave({ title: title.trim(), dueDate, description: (description || '').trim() })
+    onSave({
+      title: title.trim(),
+      dueDate,
+      description: (description || '').trim(),
+    })
     history.push('/')
   }
 

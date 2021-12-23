@@ -17,7 +17,4 @@ const mapDispatchToProps = (dispatch: Dispatch<any>, ownProps) => ({
   },
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Button)
+export default connect(mapStateToProps, mapDispatchToProps)(Button)

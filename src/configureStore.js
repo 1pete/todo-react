@@ -10,7 +10,8 @@ export default function configureStore() {
   let enhancer
 
   if (__DEV__) {
-    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose // eslint-disable-line
+    const composeEnhancers =
+      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose // eslint-disable-line
 
     enhancer = composeEnhancers()
   } else {

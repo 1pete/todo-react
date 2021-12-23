@@ -1,11 +1,6 @@
 // @flow
 
-import {
-  ADD_TODO,
-  EDIT_TODO,
-  DELETE_TODO,
-  TOGGLE_TODO,
-} from '../actions'
+import { ADD_TODO, EDIT_TODO, DELETE_TODO, TOGGLE_TODO } from '../actions'
 
 type Todo = {
   id: string,
@@ -16,7 +11,10 @@ type Action = Todo & {
   type: string,
 }
 
-export default (state: Array<Todo> = [], { type, ...data }: Action): Array<Todo> => {
+export default (
+  state: Array<Todo> = [],
+  { type, ...data }: Action,
+): Array<Todo> => {
   if (type === ADD_TODO) {
     return [...state, data]
   }

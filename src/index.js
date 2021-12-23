@@ -31,16 +31,17 @@ OfflineRuntime.install({
 
 const { store, persistor } = configureStore()
 
-let renderApp = (Component) => render(
-  <Provider store={store}>
-    <PersistGate persistor={persistor}>
-      <MuiThemeProvider theme={theme}>
-        <Component />
-      </MuiThemeProvider>
-    </PersistGate>
-  </Provider>,
-  document.getElementById('root'),
-)
+let renderApp = (Component) =>
+  render(
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <MuiThemeProvider theme={theme}>
+          <Component />
+        </MuiThemeProvider>
+      </PersistGate>
+    </Provider>,
+    document.getElementById('root'),
+  )
 
 renderApp(App)
 
