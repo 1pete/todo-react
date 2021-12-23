@@ -1,5 +1,3 @@
-// @flow
-
 import { uuid } from '../utils'
 
 export const ADD_TODO = 'ADD_TODO'

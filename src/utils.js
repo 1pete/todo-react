@@ -1,5 +1,3 @@
-// @flow
-
 export function uuid(): string {
   return new Array(32).fill(null).reduce((result, _, i) => {
     /* eslint-disable no-bitwise */

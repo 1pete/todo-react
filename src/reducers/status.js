@@ -1,5 +1,3 @@
-// @flow
-
 import { FILTER_TODO } from '../actions'
 
 type Action = {

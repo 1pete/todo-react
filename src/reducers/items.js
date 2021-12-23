@@ -1,5 +1,3 @@
-// @flow
-
 import { ADD_TODO, EDIT_TODO, DELETE_TODO, TOGGLE_TODO } from '../actions'
 
 type Todo = {

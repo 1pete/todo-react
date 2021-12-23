@@ -1,5 +1,3 @@
-// @flow
-
 import { connect } from 'react-redux'
 import { startOfToday } from 'date-fns'
 
