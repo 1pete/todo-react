@@ -39,7 +39,7 @@
     "favicons": "~6.2.0",
     "favicons-webpack-plugin": "~5.0.0",
     "html-webpack-plugin": "~5.5.0",
-    "mocha": "~6.2.0",
+    "mocha": "~9.1.0",
     "prettier": "~2.5.0",
     "webpack": "~5.65.0",
     "webpack-bundle-analyzer": "~4.5.0",
