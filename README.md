@@ -1,20 +1,33 @@
 ## TODO
 
-[![Build Status](https://travis-ci.org/1pete/todo-react.svg?branch=master)](https://travis-ci.org/1pete/todo-react)
+[![CI](https://github.com/1pete/todo-react/actions/workflows/ci.yml/badge.svg)](https://github.com/1pete/todo-react/actions/workflows/ci.yml)
 
-PWA Todo App built with React+Redux
+PWA to-do app built with React, Redux Toolkit and MUI, bundled with Vite.
 
-#### How to run this app in dev environment
-1. run commands below
+Requires Node.js 22.22 or newer.
 
-    ```
-    yarn
-    yarn start
-    ```
-2. open url `http://localhost:3000`
+#### Development
 
-
-#### How to build app for production environment
 ```
-yarn build
+npm install
+npm run dev
 ```
+
+Then open `http://localhost:3000/todo-react/`.
+
+#### Checks
+
+```
+npm run lint
+npm run typecheck
+npm test
+```
+
+#### Production build
+
+```
+npm run build
+npm run preview
+```
+
+Pushes to `master` are built and deployed to GitHub Pages by the CI workflow.

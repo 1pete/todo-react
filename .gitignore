@@ -1,9 +1,6 @@
-.nyc_output
 coverage
+dev-dist
 dist
 node_modules
 npm-debug.log
-records.json
-report.html
-stats.json
-yarn-error.log
+*.local
